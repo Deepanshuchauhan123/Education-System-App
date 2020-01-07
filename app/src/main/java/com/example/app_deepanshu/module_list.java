@@ -36,8 +36,8 @@ public class module_list extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        progressBar = findViewById(R.id.progressBar);
-        progressBar.setVisibility(View.VISIBLE);
+//        progressBar = findViewById(R.id.progressBar);
+//        progressBar.setVisibility(View.VISIBLE);
       //  floatingActionButton = findViewById(R.id.fab);
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -76,15 +76,15 @@ public class module_list extends AppCompatActivity {
                             )
                     );
                 }
-                recyclerView = findViewById(R.id.recyclerView);
+               // recyclerView =findViewById(R.id.recyclerView1);
+                recyclerView = (RecyclerView) findViewById(R.id.recyclerView1);
                 recyclerView.setHasFixedSize(true);
                 recyclerView.setLayoutManager(new LinearLayoutManager(module_list.this));
 
 
                 adapter = new ModuleAdapter(module_list.this,moduleList);
-                progressBar.setVisibility(View.GONE);
+               // progressBar.setVisibility(View.GONE);
                 recyclerView.setAdapter(adapter);
-
             }
 
             @Override

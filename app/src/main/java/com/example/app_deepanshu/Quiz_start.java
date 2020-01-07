@@ -40,7 +40,7 @@ public class Quiz_start extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
         progressBar.setVisibility(View.VISIBLE);
      //   floatingActionButton = findViewById(R.id.fab);
-        recyclerView=findViewById(R.id.recyclerView);
+        recyclerView=findViewById(R.id.recyclerView1);
 //
 //        floatingActionButton.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -75,7 +75,7 @@ public class Quiz_start extends AppCompatActivity {
                             )
                     );
                 }
-                recyclerView = findViewById(R.id.recyclerView);
+                recyclerView = findViewById(R.id.recyclerView1);
                 recyclerView.setHasFixedSize(true);
                 recyclerView.setLayoutManager(new LinearLayoutManager(Quiz_start.this));
 

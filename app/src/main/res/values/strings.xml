@@ -127,6 +127,19 @@
     <string name="que9">Does the teacher tell you the importance and practical application of the subject or not?</string>
     <string name="que10">Does the teacher teach you moral knowledge or not?</string>
     <string name="teach_feed">Teacher\'s Feedback Form</string>
+    <string name="Date">Enter Date</string>
+    <string name="Notice">Enter Activity Notice For Students</string>
+    <string name="venue">Enter Venue Of Activity</string>
+    <string name="teachs">Teacher Co-ordinator and Contact No.</string>
+    <string name="studs">Students Co-Ordinator of Activity</string>
+    <string name="activity">Activities For Students</string>
+    <string name="name">Teacher Name</string>
+    <string name="mobilee">Mobile ::</string>
+    <string name="emall">E-Mail ::</string>
+    <string name="naam">Name ::</string>
+    <string name="adhaark">Aadhar ::</string>
+    <string name="Add">Address ::</string>
+    <string name="stated">State ::</string>
 
 
     <string-array name="stream">

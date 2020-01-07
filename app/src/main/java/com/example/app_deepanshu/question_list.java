@@ -76,7 +76,7 @@ public class question_list extends AppCompatActivity {
                             )
                     );
                 }
-                recyclerView = findViewById(R.id.recyclerView);
+                recyclerView = findViewById(R.id.recyclerView1);
                 recyclerView.setHasFixedSize(true);
                 recyclerView.setLayoutManager(new LinearLayoutManager(question_list.this));
 

@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_main_main"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Quiz_start"></activity>
+        <activity android:name=".Teacher_List_Activity"></activity>
+        <activity android:name=".School_Activity_For_Students" />
+        <activity android:name=".Quiz_start" />
         <activity android:name=".FeedBack_Student" />
         <activity android:name=".Add_Student" />
         <activity android:name=".School_Teacher_List_Display" />
@@ -27,6 +29,7 @@
         <activity android:name=".teacher_report_update" />
         <activity android:name=".Report_teacher" />
         <activity android:name=".Sarpanch_reg" />
+        <activity android:name=".module_list" />
         <activity android:name=".Sarpanch_login" />
         <activity android:name=".Sarpanch_main" />
         <activity android:name=".Doctor_main" />

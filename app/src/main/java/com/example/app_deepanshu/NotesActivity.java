@@ -82,7 +82,7 @@ public class NotesActivity extends AppCompatActivity {
                             )
                     );
                 }
-                recyclerView = findViewById(R.id.recyclerView);
+                recyclerView = findViewById(R.id.recyclerView1);
                 recyclerView.setHasFixedSize(true);
                 recyclerView.setLayoutManager(new LinearLayoutManager(NotesActivity.this));
 

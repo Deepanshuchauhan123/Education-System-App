@@ -1,18 +1,21 @@
 package com.example.app_deepanshu.api;
 
+import android.widget.EditText;
+import android.widget.Spinner;
+
 import com.example.app_deepanshu.Choice;
+import com.example.app_deepanshu.Display_teach;
 import com.example.app_deepanshu.Key_Verify;
 import com.example.app_deepanshu.Module;
 import com.example.app_deepanshu.Notes;
 import com.example.app_deepanshu.Question;
+import com.example.app_deepanshu.Subject;
+import com.example.app_deepanshu.Teach_sub;
 import com.example.app_deepanshu.Topic;
 import com.example.app_deepanshu.models.DefaultResponse;
 import com.example.app_deepanshu.stu_login;
 
 import java.util.List;
-
-import javax.security.auth.Subject;
-
 import okhttp3.MultipartBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -118,42 +121,61 @@ public interface Api {
             @Field("username") String username,
             @Field("password") String password
     );
-    @Headers("Authorization:token c71fd3475423a9d0d3000cc537809009abe99810")
+
+
+    @FormUrlEncoded
+    @POST("/edu/TeacherDetailCreate")
+    Call<DefaultResponse> addTeacherDetail(
+            @Field("stream") String stream,
+            @Field("batch") String batch,
+            @Field("teacher") String teacher,
+            @Field("clas") String clas,
+            @Field("subject") String subject
+    );
+
+
+    @Headers("Authorization:token 45b0683fedb943c85ccb38d05a73a605940d23e0")
     @GET("module")
     Call<List<Module>> getModules(@Query("search") int id);
-    @Headers("Authorization:token c71fd3475423a9d0d3000cc537809009abe99810")
+    @Headers("Authorization:token 45b0683fedb943c85ccb38d05a73a605940d23e0")
     @GET("/")
     Call<List<com.example.app_deepanshu.Subject>> getSubjects();
-    @Headers("Authorization:token c71fd3475423a9d0d3000cc537809009abe99810")
+    @Headers("Authorization:token 45b0683fedb943c85ccb38d05a73a605940d23e0")
     @GET("topic")
     Call<List<Topic>> getTopics(@Query("search") int id);
-    @Headers("Authorization:token c71fd3475423a9d0d3000cc537809009abe99810")
+    @Headers("Authorization:token 45b0683fedb943c85ccb38d05a73a605940d23e0")
     @GET("question")
     Call<List<Question>> getQuestions(@Query("search") int id);
-    @Headers("Authorization:token c71fd3475423a9d0d3000cc537809009abe99810")
+    @Headers("Authorization:token 45b0683fedb943c85ccb38d05a73a605940d23e0")
     @GET("choice")
     Call<List<Choice>> getChoices(@Query("search") int id);
-    @Headers("Authorization:token c71fd3475423a9d0d3000cc537809009abe99810")
+    @Headers("Authorization:token 45b0683fedb943c85ccb38d05a73a605940d23e0")
     @GET("edu")
     Call<List<Notes>> getNotes(@Query("search") int id);
-    @Headers("Authorization:token c71fd3475423a9d0d3000cc537809009abe99810")
+    @Headers("Authorization:token 45b0683fedb943c85ccb38d05a73a605940d23e0")
     @POST("SubjectCreate")
     Call<Subject> postSubject(@Body Subject subject);
-    @Headers("Authorization:token c71fd3475423a9d0d3000cc537809009abe99810")
+    @Headers("Authorization:token 45b0683fedb943c85ccb38d05a73a605940d23e0")
     @POST("module/ModuleCreate")
     Call<Module> postModule(@Body Module module);
-    @Headers("Authorization:token c71fd3475423a9d0d3000cc537809009abe99810")
+    @Headers("Authorization:token 45b0683fedb943c85ccb38d05a73a605940d23e0")
     @POST("topic/TopicCreate")
     Call<Topic> postTopic(@Body Topic topic);
-    @Headers("Authorization:token c71fd3475423a9d0d3000cc537809009abe99810")
+    @Headers("Authorization:token 45b0683fedb943c85ccb38d05a73a605940d23e0")
     @POST("question/QuestionCreate")
     Call<Question> postQuestion(@Body Question question);
-    @Headers("Authorization:token c71fd3475423a9d0d3000cc537809009abe99810")
+    @Headers("Authorization:token 45b0683fedb943c85ccb38d05a73a605940d23e0")
     @POST("choice/ChoiceCreate")
     Call<Choice> postChoice(@Body Choice choice);
-    @Headers("Authorization:token c71fd3475423a9d0d3000cc537809009abe99810")
+    @Headers("Authorization:token 45b0683fedb943c85ccb38d05a73a605940d23e0")
     @Multipart
     @POST("edu/NoteCreate")
     Call<Notes> uploadNotes(@Part MultipartBody.Part file,
                             @Part("module") Integer module);
+
+    @GET("account/teacher")
+    Call<List<Display_teach>> getTeachers();
+
+
+
 }

@@ -16,13 +16,23 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class school_main_grid extends AppCompatActivity {
-    private DatabaseReference mRef;
-private Button bteachers;
+    //private DatabaseReference mRef;
+private Button bteachers,bActivity;
 public static String value="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_school_main_grid);
+
+        bActivity=(Button) findViewById(R.id.activitys);
+        bActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(school_main_grid.this,School_Activity_For_Students.class);
+                startActivity(i);
+            }
+        });
+
         bteachers=(Button)findViewById(R.id.school_teachers);
        bteachers.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -34,18 +44,18 @@ public static String value="";
     }
 
     public school_main_grid() {
-        mRef = FirebaseDatabase.getInstance()
-                .getReference("School_portal").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
-        mRef.child("School_Verify_Key").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot snapshot) {
-
-                value = snapshot.getValue().toString();
-            }
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
+//        mRef = FirebaseDatabase.getInstance()
+//                .getReference("School_portal").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+//        mRef.child("School_Verify_Key").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot snapshot) {
+//
+//                value = snapshot.getValue().toString();
+//            }
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//
+//            }
+//        });
     }
 }

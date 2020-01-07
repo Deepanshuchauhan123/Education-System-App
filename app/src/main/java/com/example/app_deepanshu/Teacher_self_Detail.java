@@ -2,6 +2,7 @@ package com.example.app_deepanshu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,9 +15,15 @@ import android.widget.Spinner;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
+import com.example.app_deepanshu.api.RetrofitClient;
+import com.example.app_deepanshu.models.DefaultResponse;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class Teacher_self_Detail extends AppCompatActivity
 {
@@ -90,43 +97,32 @@ public class Teacher_self_Detail extends AppCompatActivity
 
         subjects=(EditText)findViewById(R.id.subject);
         batch=(EditText)findViewById(R.id.batch);
+        final String Batch = batch.getText().toString().trim();
         btnsave=(Button)findViewById(R.id.btnsave);
 
         subject=new teacher();
 
-        final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference reff = database.getReference("Teacher_portal").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+      //  final FirebaseDatabase database = FirebaseDatabase.getInstance();
+     //   final DatabaseReference reff = database.getReference("Teacher_portal").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
 
         btnsave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (c == 0) {
-                    Toast.makeText(Teacher_self_Detail.this, "Enter a valid class", Toast.LENGTH_SHORT).show();
-                }
-                else
-                    if(s==0)
-                    {
-                        Toast.makeText(Teacher_self_Detail.this, "Enter a valid Stream", Toast.LENGTH_SHORT).show();
-                    }
-                    else
-                        if(c==7  && s==5)
-                        {
-                            Toast.makeText(Teacher_self_Detail.this, "You should chooose a stream", Toast.LENGTH_SHORT).show();
-                        }
-                        else
-                        if(c==8 && s==5)
-                        {
-                            Toast.makeText(Teacher_self_Detail.this, "You should chooose a stream", Toast.LENGTH_SHORT).show();
-                        }
+                Call<DefaultResponse> call= RetrofitClient.getInstance()
+                                    .getApi()
+                                    .addTeacherDetail(sitem,Batch,"1","1","1");
+                            call.enqueue(new Callback<DefaultResponse>() {
+                                @Override
+                                public void onResponse(Call<DefaultResponse> call, Response<DefaultResponse> response) {
+                                        DefaultResponse dr = response.body();
+                                        Toast.makeText(Teacher_self_Detail.this,response.message(), Toast.LENGTH_LONG).show();
+                                      }
+                                @Override
+                                public void onFailure(Call<DefaultResponse> call, Throwable t) {
 
-                    else {
-                    subject.setSubject(subjects.getText().toString().trim());
-                    subject.setBatch(batch.getText().toString().trim());
-                    subject.setClasses(classes.getSelectedItem().toString());
-                    subject.setStream(stream.getSelectedItem().toString());
-                    reff.child("Teacher_Subjects").push().setValue(subject);
-                    Toast.makeText(Teacher_self_Detail.this, "Data inserted Sucessfully", Toast.LENGTH_SHORT).show();
-                }
+                                    Toast.makeText(Teacher_self_Detail.this,t.getMessage(),Toast.LENGTH_LONG).show();
+                                }
+                            });
             }
         });
     }

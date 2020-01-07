@@ -89,7 +89,7 @@ public class topic_list extends AppCompatActivity {
                             )
                     );
                 }
-                recyclerView = findViewById(R.id.recyclerView);
+                recyclerView = findViewById(R.id.recyclerView1);
                 recyclerView.setHasFixedSize(true);
                 recyclerView.setLayoutManager(new LinearLayoutManager(topic_list.this));
 
