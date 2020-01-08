@@ -11,6 +11,7 @@ import com.example.app_deepanshu.Notes;
 import com.example.app_deepanshu.Question;
 import com.example.app_deepanshu.Schemes_Model;
 import com.example.app_deepanshu.Subject;
+import com.example.app_deepanshu.Subject_Model_Teach;
 import com.example.app_deepanshu.Teach_sub;
 import com.example.app_deepanshu.Topic;
 import com.example.app_deepanshu.models.DefaultResponse;
@@ -133,7 +134,17 @@ public interface Api {
             @Field("clas") String clas,
             @Field("subject") String subject
     );
+    @GET("/edu/TeacherDetail")
+    Call<List<Subject_Model_Teach>> getSubject();
 
+    @FormUrlEncoded
+    @POST("/edu/TeacherDetailCreate")
+    Call<DefaultResponse> addActivity(
+            @Field("notice") String notice,
+            @Field("venue") String venue,
+            @Field("teacher") String teacher,
+            @Field("student") String student
+    );
 
     @Headers("Authorization:token 45b0683fedb943c85ccb38d05a73a605940d23e0")
     @GET("module")
@@ -179,6 +190,8 @@ public interface Api {
 
     @GET("/scheme")
     Call<List<Schemes_Model>> getSchemes();
+
+
 
 
 
