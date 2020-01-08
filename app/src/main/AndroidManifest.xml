@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_main_main"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Teacher_List_Activity"></activity>
+        <activity android:name=".Scheme_Full_Display"></activity>
+        <activity android:name=".Schemes_Activity" />
+        <activity android:name=".Teacher_List_Activity" />
         <activity android:name=".School_Activity_For_Students" />
         <activity android:name=".Quiz_start" />
         <activity android:name=".FeedBack_Student" />

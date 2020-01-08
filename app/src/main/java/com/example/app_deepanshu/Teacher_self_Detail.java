@@ -31,6 +31,7 @@ public class Teacher_self_Detail extends AppCompatActivity
     Spinner classes,stream;
     int c,s;
     String citem,sitem;
+    String Batch;
     Button btnsave;
     teacher subject;
 
@@ -97,7 +98,7 @@ public class Teacher_self_Detail extends AppCompatActivity
 
         subjects=(EditText)findViewById(R.id.subject);
         batch=(EditText)findViewById(R.id.batch);
-        final String Batch = batch.getText().toString().trim();
+        Batch = batch.getText().toString().trim();
         btnsave=(Button)findViewById(R.id.btnsave);
 
         subject=new teacher();
@@ -107,10 +108,11 @@ public class Teacher_self_Detail extends AppCompatActivity
 
         btnsave.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 Call<DefaultResponse> call= RetrofitClient.getInstance()
                                     .getApi()
-                                    .addTeacherDetail(sitem,Batch,"1","1","1");
+                                    .addTeacherDetail(sitem,batch.getText().toString(),"1","1","1");
                             call.enqueue(new Callback<DefaultResponse>() {
                                 @Override
                                 public void onResponse(Call<DefaultResponse> call, Response<DefaultResponse> response) {

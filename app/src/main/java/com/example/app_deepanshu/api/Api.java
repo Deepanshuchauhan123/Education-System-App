@@ -9,6 +9,7 @@ import com.example.app_deepanshu.Key_Verify;
 import com.example.app_deepanshu.Module;
 import com.example.app_deepanshu.Notes;
 import com.example.app_deepanshu.Question;
+import com.example.app_deepanshu.Schemes_Model;
 import com.example.app_deepanshu.Subject;
 import com.example.app_deepanshu.Teach_sub;
 import com.example.app_deepanshu.Topic;
@@ -175,6 +176,9 @@ public interface Api {
 
     @GET("account/teacher")
     Call<List<Display_teach>> getTeachers();
+
+    @GET("/scheme")
+    Call<List<Schemes_Model>> getSchemes();
 
 
 

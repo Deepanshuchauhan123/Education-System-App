@@ -10,7 +10,7 @@ import android.widget.Button;
 public class student_grid extends AppCompatActivity {
     private Button secondgrid;
     private Button innovation;
-    private Button feedback;
+    private Button feedback,scheme;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -40,6 +40,15 @@ public class student_grid extends AppCompatActivity {
                 public void onClick(View v)
                 {
                     Intent i = new Intent(student_grid.this, FeedBack_Student.class);
+                    startActivity(i);
+                }
+            });
+            scheme = (Button) findViewById(R.id.scheme);
+            scheme.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v)
+                {
+                    Intent i = new Intent(student_grid.this, Schemes_Activity.class);
                     startActivity(i);
                 }
             });

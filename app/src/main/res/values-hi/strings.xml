@@ -153,6 +153,18 @@
     <string name="adhaark">Aadhar ::</string>
     <string name="Add">Address ::</string>
     <string name="stated">State ::</string>
+    <string name="Title">Title Of Scheme::</string>
+    <string name="cat">Cateogry::</string>
+    <string name="Type">Type Of Scholarship:</string>
+    <string name="cateogry">Cateogry::</string>
+    <string name="gender">Gender::</string>
+    <string name="level">Level::</string>
+    <string name="Beneficiary">Beneficiary::</string>
+    <string name="org">Organization::</string>
+    <string name="title">Title of ScholarShip</string>
+    <string name="about">About ScholarShip::</string>
+    <string name="desc">Description Of ScholarShip::</string>
+    <string name="Link">Link Of Scholarship::</string>
 
 </resources>
 
