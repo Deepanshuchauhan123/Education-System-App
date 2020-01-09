@@ -48,16 +48,16 @@ public class Report_By_Teacher extends AppCompatActivity {
                 Call<DefaultResponse> call= RetrofitClient.getInstance()
                         .getApi()
                         .addReport(naam.getText().toString()
-                                ,aadhar.getText().toString()
+                                ,Integer.parseInt(aadhar.getText().toString())
                                 ,classe.getText().toString()
                                 ,subjects.getText().toString()
                                 ,teach_nam.getText().toString()
                                 ,validity.getText().toString()
-                                ,total_clss.getText().toString()
-                                ,attend_class.getText().toString()
+                                ,Integer.parseInt(total_clss.getText().toString())
+                                ,Integer.parseInt(attend_class.getText().toString())
                                 ,exam_name.getText().toString()
-                                ,marks.getText().toString()
-                                ,"15"
+                                ,Integer.parseInt(marks.getText().toString())
+                                ,15
                                 ,true
                                 ,"Moderate"
                                 ,"Good Player"

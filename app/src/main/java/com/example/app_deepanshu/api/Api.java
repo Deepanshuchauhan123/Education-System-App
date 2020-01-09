@@ -1,5 +1,6 @@
 package com.example.app_deepanshu.api;
 
+import android.text.Editable;
 import android.widget.EditText;
 import android.widget.Spinner;
 
@@ -12,11 +13,11 @@ import com.example.app_deepanshu.Question;
 import com.example.app_deepanshu.Schemes_Model;
 import com.example.app_deepanshu.Subject;
 import com.example.app_deepanshu.Subject_Model_Teach;
-import com.example.app_deepanshu.Teach_sub;
 import com.example.app_deepanshu.Topic;
 import com.example.app_deepanshu.models.DefaultResponse;
 import com.example.app_deepanshu.stu_login;
 
+import java.math.BigInteger;
 import java.util.List;
 import okhttp3.MultipartBody;
 import retrofit2.Call;
@@ -162,16 +163,16 @@ public interface Api {
     @POST("/edu/ReportCardCreate")
     Call<DefaultResponse> addReport(
             @Field("name") String name,
-            @Field("aadhar") String aadhar,
+            @Field("aadhar") int aadhar,
             @Field("clas") String clas,
             @Field("subject") String subject,
             @Field("teacher_name") String teacher_name,
             @Field("validity") String validity,
-            @Field("total_classes") String total_classes,
-            @Field("attended_classes") String attended_classes,
+            @Field("total_classes") int total_classes,
+            @Field("attended_classes") int attended_classes,
             @Field("exam_name") String exam_name,
-            @Field("marks") String marks,
-            @Field("homework_number") String homework_number,
+            @Field("marks") int marks,
+            @Field("homework_number") Integer homework_number,
             @Field("learning") boolean learning,
             @Field("behaviour") String behaviour,
             @Field("sports") String sports,
