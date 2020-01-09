@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".FeedBack_Student"
     android:orientation="vertical"
-    android:background="@drawable/main_background">
+    android:background="@drawable/student_main_bg">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -38,12 +38,34 @@
         android:padding="4dp"
         android:background="#ffffff"
         android:textSize="20sp"/>
-<RatingBar
-    android:layout_width="wrap_content"
-    android:layout_height="55dp"
-    android:layout_gravity="center"
-    />
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_grp1">
+<RadioButton
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/one1"
+    android:onClick="checkButton"
+    android:text="@string/yes"
+    android:textSize="20sp"
+    />
+    <RadioButton
+        android:layout_width="100dp"
+        android:id="@+id/one2"
+        android:layout_height="wrap_content"
+        android:text="@string/No"
+        android:textSize="20sp"
+        />
+
+        </RadioGroup>
+    </RelativeLayout>
 </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -59,11 +81,32 @@
             android:padding="4dp"
             android:background="#ffffff"
             android:textSize="20sp"/>
-        <RatingBar
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="55dp"
-            android:layout_gravity="center"
-            />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_grp2">
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:id="@+id/two1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yes"
+                    android:textSize="20sp"
+                    />
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:id="@+id/two2"
+                    android:layout_height="wrap_content"
+                    android:text="@string/No"
+                    android:textSize="20sp"
+                    />
+
+            </RadioGroup>
+        </RelativeLayout>
 
     </LinearLayout>
     <LinearLayout
@@ -80,11 +123,32 @@
             android:padding="4dp"
             android:background="#ffffff"
             android:textSize="20sp"/>
-        <RatingBar
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="55dp"
-            android:layout_gravity="center"
-            />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_grp3">
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:id="@+id/three1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yes"
+                    android:textSize="20sp"
+                    />
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:id="@+id/three2"
+                    android:layout_height="wrap_content"
+                    android:text="@string/No"
+                    android:textSize="20sp"
+                    />
+
+            </RadioGroup>
+        </RelativeLayout>
 
     </LinearLayout>
     <LinearLayout
@@ -101,11 +165,32 @@
             android:padding="4dp"
             android:background="#ffffff"
             android:textSize="20sp"/>
-        <RatingBar
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="55dp"
-            android:layout_gravity="center"
-            />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_grp4">
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:id="@+id/four1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yes"
+                    android:textSize="20sp"
+                    />
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:id="@+id/four2"
+                    android:layout_height="wrap_content"
+                    android:text="@string/No"
+                    android:textSize="20sp"
+                    />
+
+            </RadioGroup>
+        </RelativeLayout>
 
     </LinearLayout>
     <LinearLayout
@@ -122,11 +207,32 @@
             android:padding="4dp"
             android:background="#ffffff"
             android:textSize="20sp"/>
-        <RatingBar
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="55dp"
-            android:layout_gravity="center"
-            />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_grp5">
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/five1"
+                    android:text="@string/yes"
+                    android:textSize="20sp"
+                    />
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:id="@+id/five2"
+                    android:layout_height="wrap_content"
+                    android:text="@string/No"
+                    android:textSize="20sp"
+                    />
+
+            </RadioGroup>
+        </RelativeLayout>
 
     </LinearLayout>
     <LinearLayout
@@ -143,11 +249,32 @@
             android:padding="4dp"
             android:background="#ffffff"
             android:textSize="20sp"/>
-        <RatingBar
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="55dp"
-            android:layout_gravity="center"
-            />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_grp6">
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/six1"
+                    android:text="@string/yes"
+                    android:textSize="20sp"
+                    />
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:id="@+id/six2"
+                    android:layout_height="wrap_content"
+                    android:text="@string/No"
+                    android:textSize="20sp"
+                    />
+
+            </RadioGroup>
+        </RelativeLayout>
 
     </LinearLayout>
     <LinearLayout
@@ -164,11 +291,32 @@
             android:padding="4dp"
             android:background="#ffffff"
             android:textSize="20sp"/>
-        <RatingBar
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="55dp"
-            android:layout_gravity="center"
-            />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_grp7">
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/seven1"
+                    android:text="@string/yes"
+                    android:textSize="20sp"
+                    />
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:id="@+id/seven2"
+                    android:layout_height="wrap_content"
+                    android:text="@string/No"
+                    android:textSize="20sp"
+                    />
+
+            </RadioGroup>
+        </RelativeLayout>
 
     </LinearLayout>
     <LinearLayout
@@ -185,12 +333,32 @@
             android:padding="4dp"
             android:background="#ffffff"
             android:textSize="20sp"/>
-        <RatingBar
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="55dp"
-            android:layout_gravity="center"
-            />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
 
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_grp8">
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/eight1"
+                    android:text="@string/yes"
+                    android:textSize="20sp"
+                    />
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:id="@+id/eight2"
+                    android:layout_height="wrap_content"
+                    android:text="@string/No"
+                    android:textSize="20sp"
+                    />
+
+            </RadioGroup>
+        </RelativeLayout>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -206,11 +374,32 @@
             android:padding="4dp"
             android:background="#ffffff"
             android:textSize="20sp"/>
-        <RatingBar
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="55dp"
-            android:layout_gravity="center"
-            />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_grp9">
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nine1"
+                    android:text="@string/yes"
+                    android:textSize="20sp"
+                    />
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:id="@+id/nine2"
+                    android:layout_height="wrap_content"
+                    android:text="@string/No"
+                    android:textSize="20sp"
+                    />
+
+            </RadioGroup>
+        </RelativeLayout>
 
     </LinearLayout>
     <LinearLayout
@@ -227,11 +416,32 @@
             android:padding="4dp"
             android:background="#ffffff"
             android:textSize="20sp"/>
-        <RatingBar
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="55dp"
-            android:layout_gravity="center"
-            />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_grp10">
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ten1"
+                    android:text="@string/yes"
+                    android:textSize="20sp"
+                    />
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:id="@+id/ten2"
+                    android:layout_height="wrap_content"
+                    android:text="@string/No"
+                    android:textSize="20sp"
+                    />
+
+            </RadioGroup>
+        </RelativeLayout>
 
     </LinearLayout>
 
@@ -239,7 +449,7 @@
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginLeft="30dp"
-
+        android:id="@+id/submit"
         android:layout_marginTop="20dp"
         android:layout_marginRight="30dp"
         android:text="@string/submit" />

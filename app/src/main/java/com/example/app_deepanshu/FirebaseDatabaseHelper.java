@@ -26,7 +26,7 @@ public class FirebaseDatabaseHelper extends Add_Student{
     }
 
     public FirebaseDatabaseHelper() {
-        sub_Class =Add_Student.citem;
+       // sub_Class =Add_Student.citem;
 
         mRef = FirebaseDatabase.getInstance()
                 .getReference("Teacher_portal").child(FirebaseAuth.getInstance().getCurrentUser().getUid());

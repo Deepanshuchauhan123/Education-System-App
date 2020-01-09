@@ -51,6 +51,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="255dp"
+                android:id="@+id/Notice"
                 android:background="#ffffff"
                 android:layout_marginTop="20dp"
                 android:hint="@string/Notice"
@@ -69,6 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:background="#ffffff"
+                android:id="@+id/Venue"
                 android:layout_marginTop="20dp"
                 android:hint="@string/venue"
                 android:paddingLeft="10dp"
@@ -87,6 +89,7 @@
                 android:layout_height="155dp"
                 android:background="#ffffff"
                 android:layout_marginTop="20dp"
+                android:id="@+id/Teacher"
                 android:hint="@string/teachs"
                 android:paddingLeft="10dp"
                 android:drawableLeft="@drawable/ic_person_black_24dp"
@@ -102,6 +105,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="155dp"
                 android:background="#ffffff"
+                android:id="@+id/Student"
                 android:layout_marginTop="20dp"
                 android:hint="@string/studs"
                 android:paddingLeft="10dp"
@@ -112,6 +116,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="55dp"
+            android:id="@+id/save"
             android:text="@string/submit"
             android:layout_marginLeft="50sp"
             android:layout_marginRight="50sp"/>

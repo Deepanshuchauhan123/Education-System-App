@@ -22,8 +22,8 @@ public class SubAdapter extends RecyclerView.Adapter<SubAdapter.ViewHolder> {
     }
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.schemes_list_item, parent, false);
+    public SubAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.subject_list_items, parent, false);
         return new SubAdapter.ViewHolder(view);
     }
 

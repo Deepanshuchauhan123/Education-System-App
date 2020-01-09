@@ -9,16 +9,25 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.example.app_deepanshu.api.RetrofitClient;
+import com.example.app_deepanshu.models.DefaultResponse;
+
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class Add_Student extends AppCompatActivity {
-    private Spinner classes,stream;
-    int c,s;
-    public static String citem;
-    public String sitem;
+    private Spinner classes1,stream1;
+    int s;
+    String c;
+    public  String citem;
+    public  String sitem;
     private EditText batch;
     private EditText name;
-    private EditText father_name;
+    private EditText father;
     private EditText adhaar;
     private Button submit;
     private Button back;
@@ -26,28 +35,63 @@ public class Add_Student extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add__student);
-        classes  = (Spinner) findViewById(R.id.classes);
-        stream  = (Spinner) findViewById(R.id.stream);
+        classes1  = (Spinner) findViewById(R.id.classes);
+        stream1  = (Spinner) findViewById(R.id.stream);
         batch=(EditText) findViewById(R.id.student_batch);
         name=(EditText) findViewById(R.id.student_name);
-        father_name=(EditText) findViewById(R.id.student_father);
+        father=(EditText) findViewById(R.id.student_father);
         adhaar=(EditText) findViewById(R.id.student_adhaar);
         submit=(Button) findViewById(R.id.button_submit);
         back=(Button) findViewById(R.id.button_back);
-        classes.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+        classes1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
         {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
             {
                 citem = parent.getItemAtPosition(position).toString();
-                c=position;
+                if(citem.equals("V")){
+                   c="8";
+                }
+                    else
+                if(citem.equals("VI")){
+                    c="9";
+                }
+                    else
+                if(citem.equals("VII")){
+                    c="10";
+                }
+                    else
+                if(citem.equals("VIII")){
+                    c="11";
+                }
+                    else
+                if(citem.equals("IX")){
+                    c="12";
+                }
+                    else
+                if(citem.equals("X")){
+                    c="13";
+                }
+                    else
+                if(citem.equals("XI")){
+                    c="14";
+                }    else
+                if(citem.equals("XII")){
+                    c="15";
+                }
+                else
+                {
+                    Toast.makeText(Add_Student.this, "Enter Valid Class", Toast.LENGTH_SHORT).show();
+                    return;
+
+                }
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent)
             {
             }
         });
-        stream.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+        stream1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
         {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
@@ -59,63 +103,36 @@ public class Add_Student extends AppCompatActivity {
             {
             }
         });
+
+
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
+                Call<DefaultResponse> call= RetrofitClient.getInstance()
+                        .getApi()
+                        .addStudent(sitem
+                                ,batch.getText().toString()
+                                ,name.getText().toString()
+                                ,father.getText().toString()
+                                ,adhaar.getText().toString()
+                                ,c
+                        );
+                call.enqueue(new Callback<DefaultResponse>() {
+                    @Override
+                    public void onResponse(Call<DefaultResponse> call, Response<DefaultResponse> response) {
+                        DefaultResponse dr = response.body();
+                        Toast.makeText(Add_Student.this,response.message(), Toast.LENGTH_LONG).show();
+                    }
+                    @Override
+                    public void onFailure(Call<DefaultResponse> call, Throwable t) {
 
-                if (c == 0) {
-                    Toast.makeText(Add_Student.this, "Enter a valid class", Toast.LENGTH_SHORT).show();
-                }
-                else
-                if(s==0)
-                {
-                    Toast.makeText(Add_Student.this, "Enter a valid Stream", Toast.LENGTH_SHORT).show();
-                }
-                else
-                if(c==7  && s==5)
-                {
-                    Toast.makeText(Add_Student.this, "You should chooose a stream", Toast.LENGTH_SHORT).show();
-                }
-                else
-                if(c==8 && s==5)
-                {
-                    Toast.makeText(Add_Student.this, "You should chooose a stream", Toast.LENGTH_SHORT).show();
-                }
-
-                else {
-                    Student_model student = new Student_model();
-                    student.setBatch(batch.getText().toString());
-                    student.setFather_Name(father_name.getText().toString());
-                    student.setStudent_Adhaar(adhaar.getText().toString());
-                    student.setStudent_Name(name.getText().toString());
-                    student.setStudent_Class(classes.getSelectedItem().toString());
-                    student.setStream(stream.getSelectedItem().toString());
-
-                    new FirebaseDatabaseHelper().addStudent(student, new FirebaseDatabaseHelper.DataStatus() {
-                        @Override
-                        public void DataisLoaded(List<teacher> subjects, List<String> keys) {
-
-                        }
-
-                        @Override
-                        public void DataIsInserted() {
-                            Toast.makeText(Add_Student.this, "Student is Added Successfully"
-                                    , Toast.LENGTH_SHORT).show();
-                        }
-
-                        @Override
-                        public void DataIsUpdated() {
-
-                        }
-
-                        @Override
-                        public void DataIsDeleted() {
-
-                        }
-                    });
-                }
+                        Toast.makeText(Add_Student.this,t.getMessage(),Toast.LENGTH_LONG).show();
+                    }
+                });
             }
         });
+
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

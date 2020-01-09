@@ -97,8 +97,7 @@ public class teacher_reg extends AppCompatActivity implements View.OnClickListen
         });
 
     }
-
-            private void teacher_signup(){
+        private void teacher_signup(){
 
         String email= email1.getText().toString().trim();
         String pass1 = password.getText().toString().trim();

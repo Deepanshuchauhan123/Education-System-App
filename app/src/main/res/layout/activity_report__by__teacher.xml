@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Report_By_Teacher"
+    android:background="@drawable/main_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/after_verify"
+            android:orientation="vertical">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                app:passwordToggleEnabled="true"
+                android:layout_marginTop="20dp">
+
+                <EditText
+                    android:id="@+id/naams"
+                    android:layout_width="350dp"
+                    android:layout_height="55dp"
+                    android:drawableLeft="@drawable/ic_perm_identity_black_24dp"
+                    android:background="#ffffff"
+                    android:layout_marginTop="40dp"
+                    android:paddingLeft="10dp"
+                    android:hint="@string/Name"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                app:passwordToggleEnabled="true"
+                android:layout_marginTop="20dp">
+                <EditText
+                    android:id="@+id/aadhar"
+                    android:layout_width="350dp"
+                    android:layout_height="55dp"
+                    android:background="#ffffff"
+                    android:layout_marginTop="40dp"
+                    android:paddingLeft="10dp"
+                    android:hint="@string/Adhaar_no"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                app:passwordToggleEnabled="true"
+                android:layout_marginTop="20dp">
+                <EditText
+                    android:id="@+id/classs"
+                    android:layout_width="350dp"
+                    android:layout_height="55dp"
+                    android:background="#ffffff"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/clas"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                app:passwordToggleEnabled="true"
+                android:layout_marginTop="20dp">
+                <EditText
+                    android:id="@+id/subject"
+                    android:layout_width="350dp"
+                    android:layout_height="55dp"
+                    android:background="#ffffff"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/subjects"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                app:passwordToggleEnabled="true"
+                android:layout_marginTop="20dp">
+
+                <EditText
+                    android:id="@+id/tch_naam"
+                    android:layout_width="350dp"
+                    android:layout_height="55dp"
+                    android:background="#ffffff"
+                    android:paddingLeft="10dp"
+
+                    android:hint="@string/teachsr"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                app:passwordToggleEnabled="true"
+                android:layout_marginTop="20dp">
+
+                <EditText
+                    android:id="@+id/val"
+                    android:layout_width="350dp"
+                    android:layout_height="55dp"
+                    android:background="#ffffff"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/validity"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                app:passwordToggleEnabled="true"
+                android:layout_marginTop="20dp">
+                <EditText
+                    android:id="@+id/total"
+                    android:layout_width="350dp"
+                    android:layout_height="55dp"
+                    android:background="#ffffff"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/total"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                app:passwordToggleEnabled="true"
+                android:layout_marginTop="20dp">
+
+                <EditText
+                    android:id="@+id/attend"
+                    android:layout_width="350dp"
+                    android:layout_height="55dp"
+                    android:background="#ffffff"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/attend"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                app:passwordToggleEnabled="true"
+                android:layout_marginTop="20dp">
+                <EditText
+                    android:id="@+id/exm"
+                    android:layout_width="350dp"
+                    android:layout_height="55dp"
+                    android:background="#ffffff"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/exam"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                app:passwordToggleEnabled="true"
+                android:layout_marginTop="20dp">
+                <EditText
+                    android:id="@+id/marks"
+                    android:layout_width="350dp"
+                    android:layout_height="55dp"
+                    android:background="#ffffff"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/marks"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                app:passwordToggleEnabled="true"
+                android:layout_marginTop="20dp">
+                <EditText
+                    android:id="@+id/sugg"
+                    android:layout_width="350dp"
+                    android:layout_height="155dp"
+                    android:background="#ffffff"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/sugges"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ProgressBar
+                android:id="@+id/simpleProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:id="@+id/button_submit"
+                android:layout_width="350dp"
+                android:paddingLeft="20dp"
+                android:layout_height="40dp"
+                android:textSize="16dp"
+                android:background="@drawable/bg1"
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/Reg"/>
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+</ScrollView>

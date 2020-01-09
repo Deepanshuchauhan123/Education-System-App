@@ -138,12 +138,47 @@ public interface Api {
     Call<List<Subject_Model_Teach>> getSubject();
 
     @FormUrlEncoded
-    @POST("/edu/TeacherDetailCreate")
+    @POST("/edu/SchoolActivityCreate")
     Call<DefaultResponse> addActivity(
             @Field("notice") String notice,
             @Field("venue") String venue,
             @Field("teacher") String teacher,
-            @Field("student") String student
+            @Field("student") String student,
+            @Field("school") String school
+    );
+
+    @FormUrlEncoded
+    @POST("/edu/StudentAddCreate")
+    Call<DefaultResponse> addStudent(
+            @Field("stream") String stream,
+            @Field("batch") String batch,
+            @Field("name") String name,
+            @Field("father_name") String father_name,
+            @Field("aadhar") String aadhar,
+            @Field("clas") String clas
+    );
+
+    @FormUrlEncoded
+    @POST("/edu/ReportCardCreate")
+    Call<DefaultResponse> addReport(
+            @Field("name") String name,
+            @Field("aadhar") String aadhar,
+            @Field("clas") String clas,
+            @Field("subject") String subject,
+            @Field("teacher_name") String teacher_name,
+            @Field("validity") String validity,
+            @Field("total_classes") String total_classes,
+            @Field("attended_classes") String attended_classes,
+            @Field("exam_name") String exam_name,
+            @Field("marks") String marks,
+            @Field("homework_number") String homework_number,
+            @Field("learning") boolean learning,
+            @Field("behaviour") String behaviour,
+            @Field("sports") String sports,
+            @Field("extra_act") String extra_act,
+            @Field("moral_edu") String moral_edu,
+            @Field("concentration") String concentration,
+            @Field("suggestions") String suggestions
     );
 
     @Headers("Authorization:token 45b0683fedb943c85ccb38d05a73a605940d23e0")

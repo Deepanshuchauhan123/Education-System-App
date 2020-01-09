@@ -165,6 +165,19 @@
     <string name="about">About ScholarShip::</string>
     <string name="desc">Description Of ScholarShip::</string>
     <string name="Link">Link Of Scholarship::</string>
+    <string name="sub">Subject::</string>
+    <string name="cls">Class::</string>
+    <string name="stm">Stream::</string>
+    <string name="batchs">Batch::</string>
+    <string name="clas">Enter Class</string>
+    <string name="subjects">Subject</string>
+    <string name="teachsr">Teacher Name</string>
+    <string name="validity">Validity</string>
+    <string name="total">Total Classes held in school</string>
+    <string name="attend">Classes Attended by Student</string>
+    <string name="exam">Exam Name</string>
+    <string name="marks">Marks in Exam and Out of</string>
+    <string name="sugges">Suggestion to the parents</string>
 
 </resources>
 

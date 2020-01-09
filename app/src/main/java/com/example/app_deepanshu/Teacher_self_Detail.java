@@ -44,25 +44,6 @@ public class Teacher_self_Detail extends AppCompatActivity
         //level = (Spinner) findViewById(R.id.level);
         classes  = (Spinner) findViewById(R.id.classes);
         stream  = (Spinner) findViewById(R.id.stream);
-
-//        level.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
-//        {
-//            @Override
-//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
-//            {
-//                 litem = parent.getItemAtPosition(position).toString();
-//                Toast.makeText(getApplicationContext(), litem, Toast.LENGTH_SHORT).show();
-//
-//            }
-//
-//            @Override
-//            public void onNothingSelected(AdapterView<?> parent)
-//            {
-//                // can leave this empty
-//            }
-//        });
-
-        // Div Spinner implementing onItemSelectedListener
         classes.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
         {
             @Override
@@ -101,7 +82,7 @@ public class Teacher_self_Detail extends AppCompatActivity
         Batch = batch.getText().toString().trim();
         btnsave=(Button)findViewById(R.id.btnsave);
 
-        subject=new teacher();
+       //  subject=new teacher();
 
       //  final FirebaseDatabase database = FirebaseDatabase.getInstance();
      //   final DatabaseReference reff = database.getReference("Teacher_portal").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
@@ -112,7 +93,7 @@ public class Teacher_self_Detail extends AppCompatActivity
             {
                 Call<DefaultResponse> call= RetrofitClient.getInstance()
                                     .getApi()
-                                    .addTeacherDetail(sitem,batch.getText().toString(),"1","1","1");
+                                    .addTeacherDetail(sitem,batch.getText().toString(),"1","5","1");
                             call.enqueue(new Callback<DefaultResponse>() {
                                 @Override
                                 public void onResponse(Call<DefaultResponse> call, Response<DefaultResponse> response) {

@@ -7,7 +7,7 @@
     tools:context=".collector_reg"
         tools:ignore="ExtraText"
 
-        android:background="@drawable/main_background"
+        android:background="@drawable/officers_main_bg"
         >
         <LinearLayout
             android:layout_width="match_parent"

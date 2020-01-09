@@ -17,7 +17,7 @@ public class teacher_grid extends AppCompatActivity {
     private Button report;
     private Button upload;
     private Button student;
-    private FirebaseAuth firebaseAuth;
+   // private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,7 @@ public class teacher_grid extends AppCompatActivity {
         setContentView(R.layout.activity_teacher_grid);
 
 
-        firebaseAuth = firebaseAuth.getInstance();
+       // firebaseAuth = firebaseAuth.getInstance();
         assigment = (Button) findViewById(R.id.teacher_self);
         assigment.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,12 +54,12 @@ public class teacher_grid extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        student = (Button) findViewById(R.id.btn4);
+        student = (Button) findViewById(R.id.report);
         student.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                Intent i = new Intent(teacher_grid.this, Report_teacher.class);
+                Intent i = new Intent(teacher_grid.this, Report_By_Teacher.class);
                 startActivity(i);
             }
         });
@@ -67,9 +67,9 @@ public class teacher_grid extends AppCompatActivity {
 
     private void Logout()
     {
-        firebaseAuth.signOut();
-        finish();
-        startActivity(new Intent(teacher_grid.this,first_cat.class));
+//        firebaseAuth.signOut();
+//        finish();
+//        startActivity(new Intent(teacher_grid.this,first_cat.class));
     }
 
     @Override
