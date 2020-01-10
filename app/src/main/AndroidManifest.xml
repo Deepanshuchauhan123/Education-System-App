@@ -10,13 +10,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_main_main"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Report_Show_Activity"></activity>
         <activity android:name=".Report_By_Teacher" />
         <activity android:name=".GetActivity_Student" />
         <activity android:name=".Scheme_Full_Display" />
         <activity android:name=".Schemes_Activity" />
-        <activity android:name=".Teacher_List_Activity" />
+        <activity android:name=".question_list" />
         <activity android:name=".School_Activity_For_Students" />
         <activity android:name=".Quiz_start" />
         <activity android:name=".FeedBack_Student" />
@@ -29,7 +30,8 @@
         <activity android:name=".teacher_Self_Display" />
         <activity android:name=".edu_start" />
         <activity android:name=".teacher_self_grid" />
-        <activity android:name=".self_teachers_support" />
+        <activity android:name=".topic_list" />
+        <activity android:name=".NotesActivity" />
         <activity android:name=".Teacher_self_Detail" />
         <activity android:name=".teacher_report_update" />
         <activity android:name=".Report_teacher" />
