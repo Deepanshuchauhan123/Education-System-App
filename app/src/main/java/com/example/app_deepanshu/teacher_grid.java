@@ -45,12 +45,13 @@ public class teacher_grid extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        upload = (Button) findViewById(R.id.btn3);
+        upload = (Button) findViewById(R.id.report_show);
         upload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                Intent i = new Intent(teacher_grid.this, deo_update.class);
+                Intent i = new Intent(teacher_grid.this, Report_Show_Activity
+                        .class);
                 startActivity(i);
             }
         });

@@ -10,6 +10,7 @@ import com.example.app_deepanshu.Key_Verify;
 import com.example.app_deepanshu.Module;
 import com.example.app_deepanshu.Notes;
 import com.example.app_deepanshu.Question;
+import com.example.app_deepanshu.ReportModel;
 import com.example.app_deepanshu.Schemes_Model;
 import com.example.app_deepanshu.Subject;
 import com.example.app_deepanshu.Subject_Model_Teach;
@@ -223,6 +224,9 @@ public interface Api {
 
     @GET("account/teacher")
     Call<List<Display_teach>> getTeachers();
+
+    @GET("/edu/ReportCardList")
+    Call<List<ReportModel>> getReport();
 
     @GET("/scheme")
     Call<List<Schemes_Model>> getSchemes();

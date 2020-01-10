@@ -67,7 +67,7 @@
                     app:cardElevation="8dp">
 
                     <Button
-                        android:id="@+id/btn1"
+                        android:id="@+id/report"
                         android:layout_width="match_parent"
                         android:layout_height="220dp"
                         android:background="@android:color/transparent" />

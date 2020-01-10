@@ -178,6 +178,10 @@
     <string name="exam">Exam Name</string>
     <string name="marks">Marks in Exam and Out of</string>
     <string name="sugges">Suggestion to the parents</string>
+    <string name="names">Name ::</string>
+    <string name="date">Date::</string>
+    <string name="behaviour">Behaviour::</string>
+    <string name="suggs">Suggestion::</string>
 
 </resources>
 

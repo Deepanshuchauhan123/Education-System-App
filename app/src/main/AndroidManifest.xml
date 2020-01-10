@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_main_main"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Report_By_Teacher"></activity>
+        <activity android:name=".Report_Show_Activity"></activity>
+        <activity android:name=".Report_By_Teacher" />
         <activity android:name=".GetActivity_Student" />
         <activity android:name=".Scheme_Full_Display" />
         <activity android:name=".Schemes_Activity" />
