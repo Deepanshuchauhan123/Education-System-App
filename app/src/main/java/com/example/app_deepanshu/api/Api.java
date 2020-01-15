@@ -184,18 +184,18 @@ public interface Api {
     @Multipart
     @POST("/edu/InnovationCreate")
     Call<DefaultResponse> add_Innov(
-            @Query("name") String name,
-            @Query("clas") String clas,
-            @Query("section") String section,
-            @Query("school") String school,
-            @Query("district") String district,
-            @Query("state") String state,
-            @Query("probTitle") String probTitle,
-            @Query("probDesc") String probDesc,
-            @Query("solTitle") String solTitle,
-            @Query("solDesc") String solDesc,
-            @Query("technique") String technique,
-            @Part MultipartBody.Part file
+            @Part("name") String name,
+            @Part("clas") String clas,
+            @Part("section") String section,
+            @Part("school") String school,
+            @Part("district") String district,
+            @Part("state") String state,
+            @Part("probTitle") String probTitle,
+            @Part("probDesc") String probDesc,
+            @Part("solTitle") String solTitle,
+            @Part("solDesc") String solDesc,
+            @Part("technique") String technique,
+            @Part MultipartBody.Part doc
 
     );
 
