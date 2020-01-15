@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -31,6 +32,7 @@ import retrofit2.Response;
 public class teacher_reg extends AppCompatActivity implements View.OnClickListener {
 
     ProgressBar simpleProgressBar;
+    private long lastClickTime = 0;
     EditText email1,password,sch_name,teacher_adhaar,teach_name,school_Key,teach_mobile,teach_area,teach_state,cnf_pass;
     Integer sch_id;
     //private FirebaseAuth mAuth;
@@ -260,6 +262,11 @@ public class teacher_reg extends AppCompatActivity implements View.OnClickListen
         switch (view.getId())
         {
             case R.id.button_submit:
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 teacher_signup();
                 break;
         }

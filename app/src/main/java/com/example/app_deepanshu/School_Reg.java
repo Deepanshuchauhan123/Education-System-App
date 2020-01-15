@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -25,6 +26,7 @@ import retrofit2.Response;
 
 public class School_Reg extends AppCompatActivity implements View.OnClickListener {
 
+    private long lastClickTime = 0;
     ProgressBar simpleProgressBar;
     public String key;
     EditText email1,password,school_teach_key,sch_name,board_name,school_key,schl_mobile,scl_location,school_state,cnf_pass;
@@ -225,6 +227,11 @@ public class School_Reg extends AppCompatActivity implements View.OnClickListene
         switch (view.getId())
         {
             case R.id.button_submit:
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 School_signup();
                 break;
 

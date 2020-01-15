@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
@@ -30,14 +31,14 @@ import retrofit2.Response;
 
 public class Innovation_Student_Activity extends AppCompatActivity {
 
-    private static final int REQUEST_CODE=43;
+    private long lastClickTime = 0;
     private Button btnsave;
     Button add,upload;
     String mediaPath;
     TextView str1;
     ProgressBar progressBar;
     private EditText naam,classs,section,school,district,
-    state,prob_title,prob_desc,sol_title,sol_desc;
+    state,prob_title,prob_desc,sol_title,sol_desc,technology;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +56,7 @@ public class Innovation_Student_Activity extends AppCompatActivity {
         sol_title=findViewById(R.id.sol_title);
         sol_desc=findViewById(R.id.sol_desc);
         btnsave=(Button)findViewById(R.id.button_submit);
+        technology=(EditText)findViewById(R.id.tech);
 
         add = findViewById(R.id.add);
         upload = findViewById(R.id.upload);
@@ -75,6 +77,11 @@ public class Innovation_Student_Activity extends AppCompatActivity {
             public void onClick(View v)
             {
 
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 progressBar.setVisibility(View.VISIBLE);
 
                 // Map is used to multipart the file using okhttp3.RequestBody
@@ -96,7 +103,7 @@ public class Innovation_Student_Activity extends AppCompatActivity {
                                 ,prob_desc.getText().toString()
                                 ,sol_title.getText().toString()
                                 ,sol_desc.getText().toString()
-                                ,"Android"
+                                ,technology.getText().toString()
                         , fileToUpload
                         );
                 call.enqueue(new Callback<DefaultResponse>() {

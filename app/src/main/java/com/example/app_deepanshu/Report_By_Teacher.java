@@ -3,6 +3,7 @@ package com.example.app_deepanshu;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +20,7 @@ public class Report_By_Teacher extends AppCompatActivity {
 
     EditText naam,aadhar,classe,subjects,teach_nam,validity,total_clss,attend_class
             ,exam_name,marks,suggestion;
+    private long lastClickTime = 0;
     Button btnsave;
 
     @Override
@@ -45,6 +47,12 @@ public class Report_By_Teacher extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
+
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 Call<DefaultResponse> call= RetrofitClient.getInstance()
                         .getApi()
                         .addReport(naam.getText().toString()

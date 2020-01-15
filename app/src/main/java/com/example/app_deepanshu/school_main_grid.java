@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
 
@@ -18,6 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 public class school_main_grid extends AppCompatActivity {
     //private DatabaseReference mRef;
 private Button bteachers,bActivity;
+    private long lastClickTime = 0;
 public static String value="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,11 @@ public static String value="";
         bActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 Intent i=new Intent(school_main_grid.this,School_Activity_For_Students.class);
                 startActivity(i);
             }
@@ -37,6 +44,11 @@ public static String value="";
        bteachers.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
+               if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                   return;
+               }
+
+               lastClickTime = SystemClock.elapsedRealtime();
                Intent i=new Intent(school_main_grid.this,School_Teacher_List_Display.class);
                startActivity(i);
            }

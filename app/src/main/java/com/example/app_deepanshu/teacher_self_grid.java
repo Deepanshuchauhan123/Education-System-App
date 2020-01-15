@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
 
@@ -11,6 +12,7 @@ public class teacher_self_grid extends AppCompatActivity {
 
     Button button1;
     Button button2;
+    private long lastClickTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,11 @@ public class teacher_self_grid extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 Intent i = new Intent(teacher_self_grid.this, Teacher_self_Detail.class);
                 startActivity(i);
             }
@@ -31,6 +38,11 @@ public class teacher_self_grid extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 Intent i1 = new Intent(teacher_self_grid.this, teacher_Self_Display.class);
                 startActivity(i1);
             }

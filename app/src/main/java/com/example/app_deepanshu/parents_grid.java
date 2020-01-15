@@ -4,12 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
 
 public class parents_grid extends AppCompatActivity {
 
     Button repot;
+    private long lastClickTime = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +24,11 @@ public class parents_grid extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 Intent i = new Intent(parents_grid.this, Report_Show_Activity.class);
                 startActivity(i);
             }

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,6 +17,7 @@ public class teacher_grid extends AppCompatActivity {
     private Button assigment;
     private Button report;
     private Button upload;
+    private long lastClickTime = 0;
     private Button student;
    // private FirebaseAuth firebaseAuth;
 
@@ -31,6 +33,11 @@ public class teacher_grid extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 Intent i = new Intent(teacher_grid.this, teacher_self_grid.class);
                 startActivity(i);
             }
@@ -41,6 +48,11 @@ public class teacher_grid extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 Intent i = new Intent(teacher_grid.this, Add_Student.class);
                 startActivity(i);
             }
@@ -50,6 +62,11 @@ public class teacher_grid extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 Intent i = new Intent(teacher_grid.this, Report_Show_Activity
                         .class);
                 startActivity(i);
@@ -60,6 +77,11 @@ public class teacher_grid extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 Intent i = new Intent(teacher_grid.this, Report_By_Teacher.class);
                 startActivity(i);
             }

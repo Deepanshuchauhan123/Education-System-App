@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -14,6 +15,7 @@ public class quiz_grid extends AppCompatActivity {
     private Button one;
     private Button two;
     private Button three;
+    private long lastClickTime = 0;
     private Button four;
     Spinner spinner;
 
@@ -26,6 +28,11 @@ public class quiz_grid extends AppCompatActivity {
         one.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 Intent i = new Intent(quiz_grid.this, Quiz_start.class);
                 startActivity(i);
             }
@@ -34,6 +41,11 @@ public class quiz_grid extends AppCompatActivity {
         two.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 Intent i = new Intent(quiz_grid.this, student_quiz.class);
                 startActivity(i);
             }
@@ -42,6 +54,11 @@ public class quiz_grid extends AppCompatActivity {
         three.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 Intent i = new Intent(quiz_grid.this, student_quiz.class);
                 startActivity(i);
             }
@@ -50,6 +67,11 @@ public class quiz_grid extends AppCompatActivity {
         four.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 Intent i = new Intent(quiz_grid.this, student_quiz.class);
                 startActivity(i);
             }

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
 
@@ -13,6 +14,7 @@ public class edu_start extends AppCompatActivity
     private Button studentbutton;
     private Button parentsbutton;
     private Button schoolbutton;
+    private long lastClickTime = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -23,6 +25,11 @@ public class edu_start extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 Intent in = new Intent(edu_start.this, student_login.class);
                 startActivity(in);
             }
@@ -33,6 +40,11 @@ public class edu_start extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 Intent i = new Intent(edu_start.this, first_cat.class);
                 startActivity(i);
             }
@@ -43,6 +55,11 @@ public class edu_start extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 Intent i = new Intent(edu_start.this, parents_login.class);
                 startActivity(i);
             }
@@ -52,6 +69,12 @@ public class edu_start extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
+
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 Intent i = new Intent(edu_start.this, School_login.class);
                 startActivity(i);
             }

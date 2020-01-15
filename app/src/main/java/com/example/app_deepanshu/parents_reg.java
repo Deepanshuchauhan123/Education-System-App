@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
@@ -28,6 +29,7 @@ public class parents_reg extends AppCompatActivity implements View.OnClickListen
    // FirebaseAuth mAuth;
 
     EditText email1,password,parent_name,prnt_mobile,prnt_area,prnt_state,adhaar;
+    private long lastClickTime = 0;
 
 
 
@@ -190,7 +192,13 @@ public class parents_reg extends AppCompatActivity implements View.OnClickListen
     @Override
     public void onClick(View view) {
         switch (view.getId()){
+
             case R.id.button_submit:
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 parent_signup();
                 break;
         }

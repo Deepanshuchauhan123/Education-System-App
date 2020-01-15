@@ -3,6 +3,7 @@ package com.example.app_deepanshu;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
@@ -21,6 +22,7 @@ public class student_reg extends AppCompatActivity implements View.OnClickListen
     EditText student_email,student_name,student_parents,student_adhaar,father_adhaar,student_password,student_mobile,student_add,student_state;
    // private FirebaseAuth mAuth;
     ProgressBar simpleProgressBar;
+    private long lastClickTime = 0;
 
 
     @Override
@@ -190,6 +192,11 @@ public class student_reg extends AppCompatActivity implements View.OnClickListen
         switch (view.getId())
         {
             case R.id.button_submit:
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 student_signup();
                 break;
         }

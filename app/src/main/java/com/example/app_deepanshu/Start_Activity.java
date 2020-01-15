@@ -11,6 +11,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.media.VolumeShaper;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
 
@@ -21,6 +22,7 @@ public class Start_Activity extends AppCompatActivity {
     private Button mButtonhealth;
     private Button mButtoneducation;
     private Button mButtonAdmin;
+    private long lastClickTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,13 @@ public class Start_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
+
+
                 Intent i = new Intent(Start_Activity.this, health_cat.class);
                 startActivity(i);
 
@@ -56,6 +65,11 @@ public class Start_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 Intent i = new Intent(Start_Activity.this, edu_start.class);
                 startActivity(i);
 
@@ -66,6 +80,11 @@ public class Start_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 Intent i = new Intent(Start_Activity.this, admin_chart.class);
                 startActivity(i);
 

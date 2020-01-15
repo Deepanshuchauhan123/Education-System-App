@@ -4,6 +4,7 @@ package com.example.app_deepanshu;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
@@ -17,6 +18,7 @@ import retrofit2.Response;
 public class student_login extends AppCompatActivity implements View.OnClickListener{
 
     EditText aadhar,password;
+    private long lastClickTime = 0;
 //    private FirebaseAuth mAuth;
     ProgressBar simpleProgressBar;
 
@@ -98,9 +100,19 @@ public class student_login extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.button_login:
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 student_login();
                 break;
             case R.id.button_register:
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 Intent i = new Intent(student_login.this, student_reg.class);
                 startActivity(i);
                 break;

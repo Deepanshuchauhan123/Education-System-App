@@ -12,6 +12,13 @@
         android:orientation="vertical"
         android:gravity="center_horizontal">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_margin="20sp"
+            android:background="@drawable/tech1"
+           />
+
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -177,6 +184,22 @@
                 android:hint="@string/sol_desc"/>
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+            <EditText
+                android:id="@+id/tech"
+                android:layout_width="350dp"
+                android:layout_height="55dp"
+                android:background="#ffffff"
+                android:paddingLeft="10dp"
+                android:inputType="text"
+                android:layout_marginTop="20dp"
+                android:hint="@string/tech"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -232,7 +255,7 @@
             android:textStyle="bold"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="10dp"
-            android:text="@string/Reg"/>
+            android:text="@string/submit"/>
     </LinearLayout>
 
 </ScrollView>

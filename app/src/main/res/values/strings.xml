@@ -175,6 +175,7 @@
     <string name="prb_desc">Problem Description</string>
     <string name="sol_title">Solution Title</string>
     <string name="sol_desc">Solution Description</string>
+    <string name="tech">Technology Used</string>
 
 
     <string-array name="stream">

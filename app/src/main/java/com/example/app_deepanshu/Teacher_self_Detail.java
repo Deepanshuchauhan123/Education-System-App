@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -29,6 +30,7 @@ public class Teacher_self_Detail extends AppCompatActivity
 {
     EditText subjects,batch;
     Spinner classes,stream;
+    private long lastClickTime = 0;
     int c,s;
     String citem,sitem;
     String Batch;
@@ -91,6 +93,11 @@ public class Teacher_self_Detail extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 Call<DefaultResponse> call= RetrofitClient.getInstance()
                                     .getApi()
                                     .addTeacherDetail(sitem,batch.getText().toString(),"2",c,"3");

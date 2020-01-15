@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -24,6 +25,7 @@ import retrofit2.Response;
 public class parents_login extends AppCompatActivity implements View.OnClickListener{
 
     EditText aadhar,password;
+    private long lastClickTime = 0;
    // private FirebaseAuth mAuth;
 
     @Override
@@ -104,9 +106,19 @@ public class parents_login extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.button_login:
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 parent_login();
                 break;
             case R.id.button_register:
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
                 Intent i = new Intent(parents_login.this, parents_reg.class);
                 startActivity(i);
                 break;
