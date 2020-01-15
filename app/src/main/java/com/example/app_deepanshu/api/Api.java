@@ -1,9 +1,5 @@
 package com.example.app_deepanshu.api;
 
-import android.text.Editable;
-import android.widget.EditText;
-import android.widget.Spinner;
-
 import com.example.app_deepanshu.Choice;
 import com.example.app_deepanshu.Display_teach;
 import com.example.app_deepanshu.Key_Verify;
@@ -18,6 +14,7 @@ import com.example.app_deepanshu.Topic;
 import com.example.app_deepanshu.models.DefaultResponse;
 import com.example.app_deepanshu.stu_login;
 
+import java.io.File;
 import java.math.BigInteger;
 import java.util.List;
 import okhttp3.MultipartBody;
@@ -133,7 +130,7 @@ public interface Api {
             @Field("stream") String stream,
             @Field("batch") String batch,
             @Field("teacher") String teacher,
-            @Field("clas") String clas,
+            @Field("clas") int clas,
             @Field("subject") String subject
     );
     @GET("/edu/TeacherDetail")
@@ -183,6 +180,25 @@ public interface Api {
             @Field("suggestions") String suggestions
     );
 
+
+    @Multipart
+    @POST("/edu/InnovationCreate")
+    Call<DefaultResponse> add_Innov(
+            @Query("name") String name,
+            @Query("clas") String clas,
+            @Query("section") String section,
+            @Query("school") String school,
+            @Query("district") String district,
+            @Query("state") String state,
+            @Query("probTitle") String probTitle,
+            @Query("probDesc") String probDesc,
+            @Query("solTitle") String solTitle,
+            @Query("solDesc") String solDesc,
+            @Query("technique") String technique,
+            @Part MultipartBody.Part file
+
+    );
+
     @Headers("Authorization:token 45b0683fedb943c85ccb38d05a73a605940d23e0")
     @GET("module")
     Call<List<Module>> getModules(@Query("search") int id);
@@ -230,9 +246,4 @@ public interface Api {
 
     @GET("/scheme")
     Call<List<Schemes_Model>> getSchemes();
-
-
-
-
-
 }

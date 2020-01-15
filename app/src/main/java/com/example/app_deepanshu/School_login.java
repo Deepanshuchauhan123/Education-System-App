@@ -87,24 +87,6 @@ public class School_login extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(getApplicationContext(),t.getMessage(),Toast.LENGTH_LONG).show();
             }
         });
-
-
-//        mAuth.signInWithEmailAndPassword(adhar1, pass1).addOnCompleteListener(School_login.this, new OnCompleteListener<AuthResult>() {
-//            @Override
-//            public void onComplete(@NonNull Task<AuthResult> task) {
-//                if (task.isSuccessful())
-//                {
-//                    simpleProgressBar.setVisibility(View.VISIBLE);
-//                    Intent intent = new Intent(School_login.this, school_main_grid.class);
-//                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                    startActivity(intent);
-//                    finish();
-//
-//                } else {
-//                    Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        });
     }
     @Override
     public void onClick(View view)

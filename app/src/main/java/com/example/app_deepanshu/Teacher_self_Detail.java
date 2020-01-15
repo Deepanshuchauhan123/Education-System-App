@@ -93,7 +93,7 @@ public class Teacher_self_Detail extends AppCompatActivity
             {
                 Call<DefaultResponse> call= RetrofitClient.getInstance()
                                     .getApi()
-                                    .addTeacherDetail(sitem,batch.getText().toString(),"2","5","3");
+                                    .addTeacherDetail(sitem,batch.getText().toString(),"2",c,"3");
                             call.enqueue(new Callback<DefaultResponse>() {
                                 @Override
                                 public void onResponse(Call<DefaultResponse> call, Response<DefaultResponse> response) {

@@ -3,6 +3,7 @@
     package="com.example.app_deepanshu">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -51,6 +52,7 @@
         <activity android:name=".student_grid" />
         <activity android:name=".deo_update" />
         <activity android:name=".collector_update" />
+        <activity android:name=".Innovation_Student_Activity"/>
         <activity android:name=".chmo_update" />
         <activity android:name=".collector_reg" />
         <activity android:name=".chmo_reg" />

@@ -182,6 +182,12 @@
     <string name="date">Date::</string>
     <string name="behaviour">Behaviour::</string>
     <string name="suggs">Suggestion::</string>
+    <string name="section">Enter Batch</string>
+    <string name="district">District</string>
+    <string name="prb_title">Problem Title</string>
+    <string name="prb_desc">Problem Description</string>
+    <string name="sol_title">Solution Title</string>
+    <string name="sol_desc">Solution Description</string>
 
 </resources>
 

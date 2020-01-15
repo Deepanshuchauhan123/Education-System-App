@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Innovation_Student_Activity"
+    android:background="@drawable/main_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+            <EditText
+                android:id="@+id/named"
+                android:layout_width="350dp"
+                android:layout_height="55dp"
+                android:inputType="textWebEmailAddress"
+                android:background="#ffffff"
+                android:layout_marginTop="40dp"
+                android:paddingLeft="10dp"
+                android:hint="@string/Name"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+            <EditText
+                android:id="@+id/classd"
+                android:layout_width="350dp"
+                android:layout_height="55dp"
+                android:background="#ffffff"
+                android:layout_marginTop="40dp"
+                android:paddingLeft="10dp"
+                android:hint="@string/clas"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+            <EditText
+                android:id="@+id/section"
+                android:layout_width="350dp"
+                android:layout_height="55dp"
+                android:inputType="text"
+                android:background="#ffffff"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:hint="@string/section"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+
+            android:layout_marginTop="20dp">
+            <EditText
+                android:id="@+id/school"
+                android:layout_width="350dp"
+                android:layout_height="55dp"
+                android:background="#ffffff"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:hint="@string/schl_name"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+            <EditText
+                android:id="@+id/district"
+                android:layout_width="350dp"
+                android:layout_height="55dp"
+                android:background="#ffffff"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:hint="@string/district"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+            <EditText
+                android:id="@+id/state"
+                android:layout_width="350dp"
+                android:layout_height="55dp"
+                android:background="#ffffff"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:hint="@string/state"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+            <EditText
+                android:id="@+id/prb_tit"
+                android:layout_width="350dp"
+                android:layout_height="55dp"
+                android:background="#ffffff"
+                android:paddingLeft="10dp"
+                android:inputType="text"
+                android:layout_marginTop="20dp"
+                android:hint="@string/prb_title"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+            <EditText
+                android:id="@+id/prb_desc"
+                android:layout_width="350dp"
+                android:layout_height="55dp"
+                android:background="#ffffff"
+                android:paddingLeft="10dp"
+                android:inputType="text"
+                android:layout_marginTop="20dp"
+                android:hint="@string/prb_desc"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+            <EditText
+                android:id="@+id/sol_title"
+                android:layout_width="350dp"
+                android:layout_height="55dp"
+                android:background="#ffffff"
+                android:paddingLeft="10dp"
+                android:inputType="text"
+                android:layout_marginTop="20dp"
+                android:hint="@string/sol_title"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+            <EditText
+                android:id="@+id/sol_desc"
+                android:layout_width="350dp"
+                android:layout_height="55dp"
+                android:background="#ffffff"
+                android:paddingLeft="10dp"
+                android:inputType="text"
+                android:layout_marginTop="20dp"
+                android:hint="@string/sol_desc"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginTop="20sp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Upload New"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                android:id="@+id/newCreate"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:id="@+id/add"
+                android:text="Add"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="filename"
+                android:textAlignment="center"
+                android:id="@+id/str"
+                />
+
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_marginTop="40dp"
+                android:id="@+id/progress" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_submit"
+            android:layout_width="350dp"
+            android:paddingLeft="20dp"
+            android:layout_height="40dp"
+            android:textSize="16dp"
+            android:background="@drawable/bg1"
+            android:textStyle="bold"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/Reg"/>
+    </LinearLayout>
+
+</ScrollView>
