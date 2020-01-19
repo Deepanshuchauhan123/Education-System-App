@@ -176,6 +176,20 @@
     <string name="sol_title">Solution Title</string>
     <string name="sol_desc">Solution Description</string>
     <string name="tech">Technology Used</string>
+    <string name="desig">Designation</string>
+    <string name="titles">Title Of CSR</string>
+    <string name="descs">Description Of Problem</string>
+    <string name="place">Location of Requirement</string>
+    <string name="csr">CSR Activities Upload</string>
+    <string name="date1">Enter Date(YYYY-MM-DD)(2020-01-18)</string>
+    <string name="year">Year(YYYY)</string>
+    <string name="month">Month(MM)</string>
+    <string name="day">Day(DD)</string>
+    <string name="Dates">Enter Date *format restricted</string>
+    <string name="techs">Technique</string>
+    <string name="techss">Technique::</string>
+    <string name="prob">Problem Title::</string>
+    <string name="sol">Solution Title::</string>
 
 
     <string-array name="stream">

@@ -28,7 +28,6 @@ public class edu_start extends AppCompatActivity
                 if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
                     return;
                 }
-
                 lastClickTime = SystemClock.elapsedRealtime();
                 Intent in = new Intent(edu_start.this, student_login.class);
                 startActivity(in);
@@ -43,7 +42,6 @@ public class edu_start extends AppCompatActivity
                 if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
                     return;
                 }
-
                 lastClickTime = SystemClock.elapsedRealtime();
                 Intent i = new Intent(edu_start.this, first_cat.class);
                 startActivity(i);
@@ -58,7 +56,6 @@ public class edu_start extends AppCompatActivity
                 if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
                     return;
                 }
-
                 lastClickTime = SystemClock.elapsedRealtime();
                 Intent i = new Intent(edu_start.this, parents_login.class);
                 startActivity(i);
@@ -73,7 +70,6 @@ public class edu_start extends AppCompatActivity
                 if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
                     return;
                 }
-
                 lastClickTime = SystemClock.elapsedRealtime();
                 Intent i = new Intent(edu_start.this, School_login.class);
                 startActivity(i);

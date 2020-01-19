@@ -10,7 +10,7 @@ import android.widget.Button;
 
 public class innovation_grid extends AppCompatActivity {
 
-    private Button new_ideas;
+    private Button new_ideas,idea_shows;
     private long lastClickTime = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,18 @@ public class innovation_grid extends AppCompatActivity {
             }
         });
 
+        idea_shows=(Button)findViewById(R.id.idea_see);
+        idea_shows.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+                lastClickTime = SystemClock.elapsedRealtime();
+                Intent in = new Intent(innovation_grid.this, Innovation_List_Show.class);
+                startActivity(in);
+            }
+        });
 
 
 

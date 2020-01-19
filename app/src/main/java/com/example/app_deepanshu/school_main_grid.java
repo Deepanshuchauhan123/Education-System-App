@@ -18,7 +18,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class school_main_grid extends AppCompatActivity {
     //private DatabaseReference mRef;
-private Button bteachers,bActivity;
+private Button bteachers,bActivity,bcsr;
     private long lastClickTime = 0;
 public static String value="";
     @Override
@@ -53,6 +53,20 @@ public static String value="";
                startActivity(i);
            }
        });
+
+        bcsr=(Button)findViewById(R.id.csr);
+        bcsr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
+                Intent i=new Intent(school_main_grid.this,CSR_Post_School.class);
+                startActivity(i);
+            }
+        });
     }
 
     public school_main_grid() {

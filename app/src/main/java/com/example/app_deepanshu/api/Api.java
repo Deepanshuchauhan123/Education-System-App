@@ -2,6 +2,7 @@ package com.example.app_deepanshu.api;
 
 import com.example.app_deepanshu.Choice;
 import com.example.app_deepanshu.Display_teach;
+import com.example.app_deepanshu.InnovationModel;
 import com.example.app_deepanshu.Key_Verify;
 import com.example.app_deepanshu.Module;
 import com.example.app_deepanshu.Notes;
@@ -158,6 +159,18 @@ public interface Api {
     );
 
     @FormUrlEncoded
+    @POST("/scheme/csr/create")
+    Call<DefaultResponse> addCSR(
+            @Field("name") String name,
+            @Field("desig") String desig,
+            @Field("title") String title,
+            @Field("desc") String desc,
+            @Field("date") String date,
+            @Field("place") String place
+    );
+
+
+    @FormUrlEncoded
     @POST("/edu/ReportCardCreate")
     Call<DefaultResponse> addReport(
             @Field("name") String name,
@@ -235,8 +248,9 @@ public interface Api {
     @Headers("Authorization:token 45b0683fedb943c85ccb38d05a73a605940d23e0")
     @Multipart
     @POST("edu/NoteCreate")
-    Call<Notes> uploadNotes(@Part MultipartBody.Part file,
-                            @Part("module") Integer module);
+    Call<Notes> uploadNotes(
+            @Part MultipartBody.Part file,
+            @Part("module") Integer module);
 
     @GET("account/teacher")
     Call<List<Display_teach>> getTeachers();
@@ -246,4 +260,7 @@ public interface Api {
 
     @GET("/scheme")
     Call<List<Schemes_Model>> getSchemes();
+
+    @GET("/edu/InnovationList")
+    Call<List<InnovationModel>> getInnovation();
 }
