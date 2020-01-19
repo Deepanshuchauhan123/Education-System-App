@@ -190,6 +190,11 @@
     <string name="techss">Technique::</string>
     <string name="prob">Problem Title::</string>
     <string name="sol">Solution Title::</string>
+    <string name="Notices">NOTICE</string>
+    <string name="venues">VENUE</string>
+    <string name="query">For Queries Contact to:-</string>
+    <string name="techer">Teachers Co-Ordinator</string>
+    <string name="students">Student\'s Co-Ordinator</string>
 
 
     <string-array name="stream">

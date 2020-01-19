@@ -139,7 +139,7 @@
     <string name="que8">क्या शिक्षक / शिक्षिका कक्षा के बाद अध्यापक आपके अध्यन से सम्बंधित सवालों को बताने के लिए उपलब्ध  रहता है  या नहीं ?</string>
     <string name="que9">क्या शिक्षक / शिक्षिका आपको विषय की महत्वता एवं प्रायोगिक अनुप्रयोग बताते हैं या नहीं ?</string>
     <string name="que10">क्या शिक्षक / शिक्षिका आपको नैतिक ज्ञान सिखाते है या नहीं ?</string>
-    <string name="teach_feed">Teacher's Feedback Form</string>
+    <string name="teach_feed">Teacher\'s Feedback Form</string>
     <string name="Date">Enter Date</string>
     <string name="Notice">Enter Activity Notice For Students</string>
     <string name="venue">Enter Venue Of Activity</string>
@@ -202,6 +202,11 @@
     <string name="techss">Technique::</string>
     <string name="prob">Problem Title::</string>
     <string name="sol">Solution Title::</string>
+    <string name="Notices">NOTICE</string>
+    <string name="venues">VENUE</string>
+    <string name="query">For Queries Contact to:-</string>
+    <string name="techer">Teachers Co-Ordinator</string>
+    <string name="students">Student\'s Co-Ordinator</string>
 
 </resources>
 

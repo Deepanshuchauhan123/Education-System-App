@@ -11,7 +11,7 @@ import android.widget.Button;
 public class student_grid extends AppCompatActivity {
     private Button secondgrid;
     private Button innovation;
-    private Button feedback,scheme;
+    private Button feedback,scheme,activities1;
     private long lastClickTime = 0;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +71,20 @@ public class student_grid extends AppCompatActivity {
 
                     lastClickTime = SystemClock.elapsedRealtime();
                     Intent i = new Intent(student_grid.this, Schemes_Activity.class);
+                    startActivity(i);
+                }
+            });
+
+            activities1 = (Button) findViewById(R.id.activities);
+            activities1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v)
+                {
+                    if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                        return;
+                    }
+                    lastClickTime = SystemClock.elapsedRealtime();
+                    Intent i = new Intent(student_grid.this, Student_Activities_Get.class);
                     startActivity(i);
                 }
             });

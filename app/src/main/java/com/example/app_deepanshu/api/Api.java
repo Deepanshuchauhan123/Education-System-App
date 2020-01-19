@@ -1,5 +1,6 @@
 package com.example.app_deepanshu.api;
 
+import com.example.app_deepanshu.ActivitiesModel;
 import com.example.app_deepanshu.Choice;
 import com.example.app_deepanshu.Display_teach;
 import com.example.app_deepanshu.InnovationModel;
@@ -260,6 +261,9 @@ public interface Api {
 
     @GET("/scheme")
     Call<List<Schemes_Model>> getSchemes();
+
+    @GET("/edu/SchoolActivity")
+    Call<List<ActivitiesModel>> getActivities();
 
     @GET("/edu/InnovationList")
     Call<List<InnovationModel>> getInnovation();
