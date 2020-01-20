@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Student_Activities_Get"></activity>
+        <activity android:name=".Innovation_Full_Display"></activity>
+        <activity android:name=".Student_Activities_Get" />
         <activity android:name=".Innovation_List_Show" />
         <activity android:name=".CSR_Post_School" />
         <activity android:name=".Report_Show_Activity" />

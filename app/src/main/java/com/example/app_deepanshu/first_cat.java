@@ -53,6 +53,7 @@ public class first_cat extends AppCompatActivity implements View.OnClickListener
         String pass1 = password.getText().toString().trim();
 
         if (username.isEmpty()) {
+            simpleProgressBar.setVisibility(View.INVISIBLE);
             aadhar.setError("ईमेल अनिवार्य है!");
             aadhar.requestFocus();
             return;
@@ -60,11 +61,13 @@ public class first_cat extends AppCompatActivity implements View.OnClickListener
 
         //for Password
         if (pass1.isEmpty()) {
+            simpleProgressBar.setVisibility(View.INVISIBLE);
             password.setError("पासवर्ड अनिवार्य है!");
             password.requestFocus();
             return;
         }
         if (pass1.length() < 6) {
+            simpleProgressBar.setVisibility(View.INVISIBLE);
             password.setError("Minimum length of Password is 6");
             password.requestFocus();
             return;
@@ -77,19 +80,22 @@ public class first_cat extends AppCompatActivity implements View.OnClickListener
             public void onResponse(Call<stu_login> call, Response<stu_login> response) {
 
                 if (response.isSuccessful()) {
-                    simpleProgressBar.setVisibility(View.VISIBLE);
                     Intent intent = new Intent(first_cat.this, teacher_grid.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
-                    simpleProgressBar.setVisibility(View.VISIBLE);
+                    simpleProgressBar.setVisibility(View.INVISIBLE);
+                    aadhar.setText("");
+                    password.setText("");
 
                 } else {
 
+                    simpleProgressBar.setVisibility(View.INVISIBLE);
                     Toast.makeText(first_cat.this,"Invalid User Credential",Toast.LENGTH_LONG).show();
                 }
             }
             @Override
             public void onFailure(Call<stu_login> call, Throwable t) {
+                simpleProgressBar.setVisibility(View.INVISIBLE);
                 Toast.makeText(getApplicationContext(),t.getMessage(),Toast.LENGTH_LONG).show();
             }
         });
@@ -120,6 +126,7 @@ public class first_cat extends AppCompatActivity implements View.OnClickListener
         {
 
             case R.id.button_login:
+                simpleProgressBar.setVisibility(View.VISIBLE);
                 if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
                     return;
                 }

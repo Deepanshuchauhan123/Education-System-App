@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,6 +16,14 @@ public class InnovationAdapter extends RecyclerView.Adapter<InnovationAdapter.Vi
 
   private ArrayList<InnovationModel> innovationModels=new ArrayList<>();
   private Context context;
+  private OnItemClickListener mListener;
+
+  public interface OnItemClickListener{
+      void OnItemClick(int position);
+  }
+  public void setOnItemClickListener(OnItemClickListener listener){
+      mListener=listener;
+  }
 
     public InnovationAdapter(Context context, ArrayList<InnovationModel> innovationModels) {
    this.innovationModels=innovationModels;
@@ -49,6 +58,20 @@ public class InnovationAdapter extends RecyclerView.Adapter<InnovationAdapter.Vi
             prob_title=(TextView)itemView.findViewById(R.id.pt);
             sol_title=(TextView)itemView.findViewById(R.id.st);
             tech=(TextView)itemView.findViewById(R.id.tech);
+
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(mListener!=null)
+                    {
+                        int position=getAdapterPosition();
+                        if(position!=RecyclerView.NO_POSITION){
+                            mListener.OnItemClick(position);
+                        }
+                    }
+                }
+            });
         }
     }
 }

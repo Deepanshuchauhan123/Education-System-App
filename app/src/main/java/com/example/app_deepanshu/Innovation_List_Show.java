@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -19,12 +20,22 @@ import retrofit2.Retrofit;
 import retrofit2.Retrofit.Builder;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class Innovation_List_Show extends AppCompatActivity {
+public class Innovation_List_Show extends AppCompatActivity implements InnovationAdapter.OnItemClickListener {
+
+    public static final String named="reger";
+    public static final String schoold="hj";
+    public static final String districtd="jhgc";
+    public static final String stated="gu";
+    public static final String prob_titd="hjd";
+    public static final String prob_sold="jbdfk";
+    public static final String sol_titd="udsfk";
+    public static final String sol_descd="udhf";
+    public static final String techd="udf";
 
     ArrayList<InnovationModel> innovationModels =new ArrayList<>();
     private InnovationAdapter innovationAdapter;
-
     private RecyclerView innov_recs;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +61,7 @@ public class Innovation_List_Show extends AppCompatActivity {
                 innovationModels=new ArrayList<>(response.body());
                 innovationAdapter=new InnovationAdapter(Innovation_List_Show.this,innovationModels);
                 innov_recs.setAdapter(innovationAdapter);
+                innovationAdapter.setOnItemClickListener(Innovation_List_Show.this);
             }
 
             @Override
@@ -57,5 +69,24 @@ public class Innovation_List_Show extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public void OnItemClick(int position) {
+
+        Intent detailtaIntent=new Intent(this,Innovation_Full_Display.class);
+        InnovationModel clickedItem= innovationModels.get(position);
+
+        detailtaIntent.putExtra(named,clickedItem.getName());
+        detailtaIntent.putExtra(schoold,clickedItem.getSchool());
+        detailtaIntent.putExtra(districtd,clickedItem.getDistrict());
+        detailtaIntent.putExtra(stated,clickedItem.getState());
+        detailtaIntent.putExtra(prob_titd,clickedItem.getProbTitle());
+        detailtaIntent.putExtra(prob_sold,clickedItem.getProbDesc());
+        detailtaIntent.putExtra(sol_titd,clickedItem.getSolTitle());
+        detailtaIntent.putExtra(sol_descd,clickedItem.getSolDesc());
+        detailtaIntent.putExtra(techd,clickedItem.getTechnique());
+
+        startActivity(detailtaIntent);
     }
 }

@@ -5,6 +5,8 @@ public class InnovationModel {
     private String name,clas,section,school,district,state
             ,probTitle,probDesc,solTitle,solDesc,technique;
 
+    public InnovationModel() {
+    }
 
     public InnovationModel(String name, String clas, String section, String school, String district, String state, String probTitle, String probDesc, String solTitle, String solDesc, String technique) {
         this.name = name;
@@ -19,6 +21,7 @@ public class InnovationModel {
         this.solDesc = solDesc;
         this.technique = technique;
     }
+
 
     public String getName() {
         return name;

@@ -195,6 +195,11 @@
     <string name="query">For Queries Contact to:-</string>
     <string name="techer">Teachers Co-Ordinator</string>
     <string name="students">Student\'s Co-Ordinator</string>
+    <string name="schools">School ::</string>
+    <string name="districts">District::</string>
+    <string name="Technique">Technology ::</string>
+    <string name="problem">Problem Title</string>
+    <string name="probdesc">Problem Description</string>
 
 
     <string-array name="stream">
