@@ -43,8 +43,7 @@ public class student_reg extends AppCompatActivity implements View.OnClickListen
         student_state=findViewById(R.id.student_state);
 
 //        mAuth = FirebaseAuth.getInstance();
-          findViewById(R.id.button_submit).setOnClickListener((View.OnClickListener)this);
-
+          findViewById(R.id.button_submit).setOnClickListener(this);
     }
 
     private void student_signup(){
@@ -127,7 +126,7 @@ public class student_reg extends AppCompatActivity implements View.OnClickListen
                 .getApi()
                 .createUser(stu_adhaar,pass,emails,
                         name,parent_name,fat_adhaar,
-                        mobile,add,state);
+                        mobile,add,state,"4");
         call.enqueue(new Callback<DefaultResponse>() {
             @Override
             public void onResponse(Call<DefaultResponse> call, Response<DefaultResponse> response) {
@@ -135,7 +134,7 @@ public class student_reg extends AppCompatActivity implements View.OnClickListen
                     DefaultResponse dr=response.body();
                     Toast.makeText(student_reg.this,"User Created Successfully",Toast.LENGTH_LONG).show();
                 }else {
-                    Toast.makeText(student_reg.this,"User Already Exist",Toast.LENGTH_LONG).show();
+                    Toast.makeText(student_reg.this,response.message(),Toast.LENGTH_LONG).show();
                 }
             }
 

@@ -67,7 +67,7 @@ public class parents_login extends AppCompatActivity implements View.OnClickList
             return;
         }
         Call<stu_login> call= RetrofitClient
-                .getInstance().getApi().parentLogin(adhar1,pass1);
+                .getInstance().getApi().parentLogin(adhar1,pass1,"Parent");
         call.enqueue(new Callback<stu_login>() {
             @Override
             public void onResponse(Call<stu_login> call, Response<stu_login> response) {

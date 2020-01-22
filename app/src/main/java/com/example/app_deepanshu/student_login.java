@@ -57,7 +57,7 @@ public class student_login extends AppCompatActivity implements View.OnClickList
         }
 
         Call<stu_login> call= RetrofitClient
-                .getInstance().getApi().userLogin(adhar1,pass1);
+                .getInstance().getApi().userLogin(adhar1,pass1,"Student");
         call.enqueue(new Callback<stu_login>() {
             @Override
             public void onResponse(Call<stu_login> call, Response<stu_login> response) {

@@ -48,14 +48,16 @@ public interface Api {
             @Field("father_aadhar") String father_aadhar,
             @Field("mobile_number") String mobile_number,
             @Field("address") String address,
-            @Field("state") String state
+            @Field("state") String state,
+            @Field("school_id") String school_id
     );
     // Student Login
     @FormUrlEncoded
-    @POST("/account/rest-auth/login/")
+    @POST("/account/login")
     Call<stu_login> userLogin(
             @Field("username") String username,
-            @Field("password") String password
+            @Field("password") String password,
+            @Field("user_type") String user_type
     );
 
     //Parents Register
@@ -73,10 +75,11 @@ public interface Api {
 
     //parents login
     @FormUrlEncoded
-    @POST("/account/rest-auth/login/")
+    @POST("/account/login")
     Call<stu_login> parentLogin(
             @Field("username") String username,
-            @Field("password") String password
+            @Field("password") String password,
+            @Field("user_type") String user_type
     );
 
 //School Register
@@ -95,10 +98,11 @@ public interface Api {
     //School Login
 
     @FormUrlEncoded
-    @POST("/account/rest-auth/login/")
+    @POST("/account/login")
     Call<stu_login> schoolLogin(
             @Field("username") String username,
-            @Field("password") String password
+            @Field("password") String password,
+            @Field("user_type") String user_type
     );
     //Teacher Verify
     @GET("/account/{key}/school")
@@ -119,10 +123,11 @@ public interface Api {
             @Field("school_id") Integer school_id
     );
     @FormUrlEncoded
-    @POST("/account/rest-auth/login/")
+    @POST("/account/login")
     Call<stu_login> teacherLogin(
             @Field("username") String username,
-            @Field("password") String password
+            @Field("password") String password,
+            @Field("user_type")String user_type
     );
 
 

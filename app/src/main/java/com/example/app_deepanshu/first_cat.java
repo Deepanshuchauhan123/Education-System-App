@@ -74,7 +74,7 @@ public class first_cat extends AppCompatActivity implements View.OnClickListener
         }
 
         Call<stu_login> call= RetrofitClient
-                .getInstance().getApi().teacherLogin(username,pass1);
+                .getInstance().getApi().teacherLogin(username,pass1,"Teacher");
         call.enqueue(new Callback<stu_login>() {
             @Override
             public void onResponse(Call<stu_login> call, Response<stu_login> response) {
