@@ -2,6 +2,7 @@ package com.example.app_deepanshu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -39,4 +40,13 @@ public class doctor_reg extends AppCompatActivity implements  AdapterView.OnItem
     public void onNothingSelected(AdapterView<?> parent) {
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        SharedPreferences prefs = getSharedPreferences("X", MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("lastActivity", getClass().getName());
+        editor.commit();
+    }
 }

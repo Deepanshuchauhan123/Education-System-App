@@ -54,7 +54,7 @@
                         android:layout_height="55dp"
                         android:text="VERIFY"
                         android:id="@+id/btn_verify"
-                        android:background="#92B4C2"
+                        android:background="@drawable/custom"
                         android:layout_marginTop="30dp"
                         android:layout_marginLeft="255dp"
                         android:gravity="center"
@@ -244,11 +244,11 @@
 
             <Button
                 android:id="@+id/button_submit"
-                android:layout_width="350dp"
+                android:layout_width="300dp"
                 android:paddingLeft="20dp"
                 android:layout_height="40dp"
                 android:textSize="16dp"
-                android:background="@drawable/bg1"
+                android:background="@drawable/custom"
                 android:textStyle="bold"
                 android:layout_marginTop="25dp"
                 android:layout_marginBottom="10dp"

@@ -126,7 +126,7 @@ public class student_reg extends AppCompatActivity implements View.OnClickListen
                 .getApi()
                 .createUser(stu_adhaar,pass,emails,
                         name,parent_name,fat_adhaar,
-                        mobile,add,state,"4");
+                        mobile,add,state,"3");
         call.enqueue(new Callback<DefaultResponse>() {
             @Override
             public void onResponse(Call<DefaultResponse> call, Response<DefaultResponse> response) {
