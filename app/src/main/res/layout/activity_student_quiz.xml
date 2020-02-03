@@ -6,7 +6,7 @@
         android:layout_height="match_parent"
     tools:context=".student_quiz"
         android:orientation="horizontal"
-        android:background="@drawable/main_background"
+        android:background="@drawable/chauhan1"
         >
 
         <LinearLayout

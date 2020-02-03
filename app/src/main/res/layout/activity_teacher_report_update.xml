@@ -5,7 +5,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         tools:context=".teacher_report_update"
-        android:background="@drawable/main_background"
+        android:background="@drawable/chauhan1"
         >
 
         <LinearLayout

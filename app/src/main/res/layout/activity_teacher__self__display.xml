@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".teacher_Self_Display"
-    android:background="@drawable/main_background">
+    android:background="@drawable/chauhan1">
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"

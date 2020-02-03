@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Sarpanch_main"
     android:orientation="vertical"
-    android:background="@drawable/sarpanchbcak2"
+    android:background="@drawable/chauhan1"
     >
 
     <ScrollView
