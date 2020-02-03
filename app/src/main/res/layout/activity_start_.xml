@@ -7,7 +7,7 @@
         tools:ignore="ExtraText"
         android:orientation="vertical"
         android:gravity="center_horizontal"
-        android:background="@drawable/main_background">
+        android:background="@drawable/chauhan1">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -22,7 +22,8 @@
                 android:layout_marginTop="125dp"
                 android:orientation="vertical"
                 android:layout_marginBottom="20dp"
-                android:background="@drawable/mmm1">
+                android:background="@drawable/fort"
+                >
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -48,6 +49,8 @@
                         android:id="@+id/button_health"
                         android:layout_width="245dp"
                         android:layout_height="50dp"
+                        android:drawableLeft="@drawable/hos_logo"
+                        android:paddingLeft="20dp"
                         android:textSize="25dp"
                         android:background="@drawable/btnbg2"
                         android:layout_marginTop="20dp"
@@ -59,6 +62,8 @@
                         android:layout_width="245dp"
                         android:layout_height="50dp"
                         android:textSize="25dp"
+                        android:drawableLeft="@drawable/edu_loho"
+                        android:paddingLeft="10dp"
                         android:background="@drawable/btnbg2"
                         android:layout_marginTop="115dp"
                         android:textColor="#000000"
@@ -69,6 +74,8 @@
                         android:layout_width="245dp"
                         android:layout_height="50dp"
                         android:textSize="25dp"
+                        android:drawableLeft="@drawable/person"
+                        android:paddingLeft="10dp"
                         android:background="@drawable/btnbg2"
                         android:layout_marginTop="205dp"
                         android:textColor="#000000"

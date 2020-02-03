@@ -31,6 +31,7 @@
     android:layout_gravity="center"
     android:padding="5dp"
     android:layout_marginBottom="20dp">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -52,7 +53,7 @@
     android:layout_width="100dp"
     android:layout_height="wrap_content"
     android:id="@+id/one1"
-    android:onClick="checkButton"
+    android:checked="true"
     android:text="@string/yes"
     android:textSize="20sp"
     />
@@ -93,6 +94,7 @@
                 <RadioButton
                     android:layout_width="100dp"
                     android:id="@+id/two1"
+                    android:checked="true"
                     android:layout_height="wrap_content"
                     android:text="@string/yes"
                     android:textSize="20sp"
@@ -135,6 +137,7 @@
                 <RadioButton
                     android:layout_width="100dp"
                     android:id="@+id/three1"
+                    android:checked="true"
                     android:layout_height="wrap_content"
                     android:text="@string/yes"
                     android:textSize="20sp"
@@ -177,6 +180,7 @@
                 <RadioButton
                     android:layout_width="100dp"
                     android:id="@+id/four1"
+                    android:checked="true"
                     android:layout_height="wrap_content"
                     android:text="@string/yes"
                     android:textSize="20sp"
@@ -220,6 +224,7 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/five1"
+                    android:checked="true"
                     android:text="@string/yes"
                     android:textSize="20sp"
                     />
@@ -262,6 +267,7 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/six1"
+                    android:checked="true"
                     android:text="@string/yes"
                     android:textSize="20sp"
                     />
@@ -303,6 +309,7 @@
                 <RadioButton
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
+                    android:checked="true"
                     android:id="@+id/seven1"
                     android:text="@string/yes"
                     android:textSize="20sp"
@@ -344,6 +351,7 @@
                 android:id="@+id/radio_grp8">
                 <RadioButton
                     android:layout_width="100dp"
+                    android:checked="true"
                     android:layout_height="wrap_content"
                     android:id="@+id/eight1"
                     android:text="@string/yes"
@@ -385,6 +393,7 @@
                 android:id="@+id/radio_grp9">
                 <RadioButton
                     android:layout_width="100dp"
+                    android:checked="true"
                     android:layout_height="wrap_content"
                     android:id="@+id/nine1"
                     android:text="@string/yes"
@@ -430,6 +439,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/ten1"
                     android:text="@string/yes"
+                    android:checked="true"
                     android:textSize="20sp"
                     />
                 <RadioButton

@@ -172,6 +172,26 @@ public interface Api {
             @Field("place") String place
     );
 
+    // Feedback post *******
+
+    @FormUrlEncoded
+    @POST("/edu/FeedbackCreate")
+    Call<DefaultResponse> addFeedback(
+            @Field("field1") Boolean field1,
+            @Field("field2") Boolean field2,
+            @Field("field3") Boolean field3,
+            @Field("field4") Boolean field4,
+            @Field("field5") Boolean field5,
+            @Field("field6") Boolean field6,
+            @Field("field7") Boolean field7,
+            @Field("field8") Boolean field8,
+            @Field("field9") Boolean field9,
+            @Field("field10") Boolean field10,
+            @Field("teacher_id") String teacher_id,
+            @Field("student_id") String student_id,
+            @Field("parent_id") String parent_id,
+            @Field("school_id") String school_id
+    );
 
     @FormUrlEncoded
     @POST("/edu/ReportCardCreate")

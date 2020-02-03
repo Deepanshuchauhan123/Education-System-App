@@ -36,8 +36,8 @@ public class Add_Student extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add__student);
-        classes1  = (Spinner) findViewById(R.id.classes);
-        stream1  = (Spinner) findViewById(R.id.stream);
+        classes1=(Spinner) findViewById(R.id.classes);
+        stream1=(Spinner) findViewById(R.id.stream);
         batch=(EditText) findViewById(R.id.student_batch);
         name=(EditText) findViewById(R.id.student_name);
         father=(EditText) findViewById(R.id.student_father);
@@ -84,7 +84,6 @@ public class Add_Student extends AppCompatActivity {
                 {
                     Toast.makeText(Add_Student.this, "Enter Valid Class", Toast.LENGTH_SHORT).show();
                     return;
-
                 }
             }
             @Override
