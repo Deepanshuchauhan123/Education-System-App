@@ -67,8 +67,11 @@ public class student_login extends AppCompatActivity implements View.OnClickList
                     Toast.makeText(student_login.this,"Login Sucessful",Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(student_login.this, student_grid.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    simpleProgressBar.setVisibility(View.VISIBLE);
                     startActivity(intent);
+                    simpleProgressBar.setVisibility(View.INVISIBLE);
+                    aadhar.setText("");
+                    password.setText("");
+
 
                 } else {
 
@@ -77,6 +80,7 @@ public class student_login extends AppCompatActivity implements View.OnClickList
              }
             @Override
             public void onFailure(Call<stu_login> call, Throwable t) {
+                simpleProgressBar.setVisibility(View.INVISIBLE);
             Toast.makeText(getApplicationContext(),t.getMessage(),Toast.LENGTH_LONG).show();
             }
         });
@@ -101,6 +105,7 @@ public class student_login extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.button_login:
+                simpleProgressBar.setVisibility(View.VISIBLE);
                 if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
                     return;
                 }

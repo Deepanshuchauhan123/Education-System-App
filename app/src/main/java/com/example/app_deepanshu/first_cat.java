@@ -1,23 +1,15 @@
 package com.example.app_deepanshu;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.app_deepanshu.api.RetrofitClient;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -130,7 +122,6 @@ public class first_cat extends AppCompatActivity implements View.OnClickListener
                 if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
                     return;
                 }
-
                 lastClickTime = SystemClock.elapsedRealtime();
                 teacher_login();
                 break;
@@ -140,7 +131,6 @@ public class first_cat extends AppCompatActivity implements View.OnClickListener
                 if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
                     return;
                 }
-
                 lastClickTime = SystemClock.elapsedRealtime();
                 Intent i = new Intent(first_cat.this, teacher_reg.class);
                 startActivity(i);

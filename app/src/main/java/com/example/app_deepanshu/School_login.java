@@ -78,7 +78,9 @@ public class School_login extends AppCompatActivity implements View.OnClickListe
                     Intent intent = new Intent(School_login.this, school_main_grid.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
-                    simpleProgressBar.setVisibility(View.VISIBLE);
+                    simpleProgressBar.setVisibility(View.INVISIBLE);
+                    aadhar.setText("");
+                    password.setText("");
 
                 } else {
 
@@ -87,6 +89,7 @@ public class School_login extends AppCompatActivity implements View.OnClickListe
             }
             @Override
             public void onFailure(Call<stu_login> call, Throwable t) {
+                simpleProgressBar.setVisibility(View.INVISIBLE);
                 Toast.makeText(getApplicationContext(),t.getMessage(),Toast.LENGTH_LONG).show();
             }
         });
@@ -97,6 +100,7 @@ public class School_login extends AppCompatActivity implements View.OnClickListe
         switch (view.getId())
         {
             case R.id.button_login:
+                simpleProgressBar.setVisibility(View.VISIBLE);
                 if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
                     return;
                 }
