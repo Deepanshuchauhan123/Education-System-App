@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Innovation_Full_Display"
-    android:background="@drawable/main_background">
+    android:background="@drawable/chauhan1">
 
 
     <LinearLayout

@@ -1,6 +1,5 @@
 package com.example.app_deepanshu;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
@@ -9,7 +8,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.media.VolumeShaper;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.View;
@@ -31,8 +29,6 @@ public class Start_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_start_);
 
         //change action bar language
-        ActionBar actionBar=getSupportActionBar();
-        actionBar.setTitle(getResources().getString(R.string.app_name));
 
         Button changeLang=findViewById(R.id.changeLang);
         changeLang.setOnClickListener(new View.OnClickListener() {
@@ -43,7 +39,7 @@ public class Start_Activity extends AppCompatActivity {
         });
 
         //mButtonLogin =(Button)findViewById(R.id.button_login);
-        mButtonhealth = (Button) findViewById(R.id.button_health);
+        mButtonhealth =findViewById(R.id.button_health);
         mButtonhealth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,7 +56,7 @@ public class Start_Activity extends AppCompatActivity {
 
             }
         });
-        mButtoneducation = (Button) findViewById(R.id.button_education);
+        mButtoneducation =findViewById(R.id.button_education);
         mButtoneducation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,7 +71,7 @@ public class Start_Activity extends AppCompatActivity {
 
             }
         });
-        mButtonAdmin = (Button) findViewById(R.id.button_duty);
+        mButtonAdmin =findViewById(R.id.button_duty);
         mButtonAdmin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -106,6 +102,7 @@ public class Start_Activity extends AppCompatActivity {
                     setLocale("hi");
                     recreate();
                 }
+
                 else if(i==1){
                     //for english
                     setLocale("en");

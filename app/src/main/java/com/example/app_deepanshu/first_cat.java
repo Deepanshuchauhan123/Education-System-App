@@ -34,7 +34,6 @@ public class first_cat extends AppCompatActivity implements View.OnClickListener
        // mAuth = FirebaseAuth.getInstance();
 
         findViewById(R.id.button_register1).setOnClickListener(this);
-
         findViewById(R.id.button_login).setOnClickListener(this);
         findViewById(R.id.edittext_password).setOnClickListener(this);
 
@@ -116,7 +115,6 @@ public class first_cat extends AppCompatActivity implements View.OnClickListener
     {
         switch (view.getId())
         {
-
             case R.id.button_login:
                 simpleProgressBar.setVisibility(View.VISIBLE);
                 if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
