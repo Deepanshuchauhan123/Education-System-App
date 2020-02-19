@@ -45,7 +45,7 @@ public class first_cat extends AppCompatActivity implements View.OnClickListener
 
         if (username.isEmpty()) {
             simpleProgressBar.setVisibility(View.INVISIBLE);
-            aadhar.setError("ईमेल अनिवार्य है!");
+            aadhar.setError("आधार अनिवार्य है!");
             aadhar.requestFocus();
             return;
         }

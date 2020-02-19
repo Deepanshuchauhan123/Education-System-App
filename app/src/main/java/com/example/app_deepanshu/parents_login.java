@@ -51,7 +51,7 @@ public class parents_login extends AppCompatActivity implements View.OnClickList
 
         //aadhar
         if (adhar1.isEmpty()) {
-            aadhar.setError("Email is Required");
+            aadhar.setError("आधार अनिवार्य है!");
             aadhar.requestFocus();
             return;
         }

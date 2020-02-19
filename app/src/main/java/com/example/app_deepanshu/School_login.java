@@ -50,7 +50,7 @@ public class School_login extends AppCompatActivity implements View.OnClickListe
         String pass1 = password.getText().toString().trim();
 
         if (username.isEmpty()) {
-            aadhar.setError("ईमेल अनिवार्य है!");
+            aadhar.setError("पंजीकरण नंबर अनिवार्य है!");
             aadhar.requestFocus();
             return;
         }

@@ -157,8 +157,7 @@ public class FeedBack_Student extends AppCompatActivity {
 
                 Call<DefaultResponse> call= RetrofitClient.getInstance()
                         .getApi()
-                        .addFeedback(true,true,true,true,true,true,true,
-                                true,true,true,"3","2","2","3");
+                        .addFeedback(b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,"4","10","1","2");
 
                 call.enqueue(new Callback<DefaultResponse>() {
                     @Override

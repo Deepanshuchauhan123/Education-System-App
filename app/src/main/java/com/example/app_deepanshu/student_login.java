@@ -46,7 +46,7 @@ public class student_login extends AppCompatActivity implements View.OnClickList
 
         //aadhar
         if (adhar1.isEmpty()) {
-            aadhar.setError("Aadhar is Required");
+            aadhar.setError("आधार अनिवार्य है!");
             aadhar.requestFocus();
             return;
         }
