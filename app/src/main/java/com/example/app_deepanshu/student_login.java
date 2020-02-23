@@ -65,7 +65,7 @@ public class student_login extends AppCompatActivity implements View.OnClickList
 
                 if (response.isSuccessful()) {
                     Toast.makeText(student_login.this,"Login Sucessful",Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(student_login.this, student_grid.class);
+                    Intent intent = new Intent(student_login.this, Splash_Moral.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                     simpleProgressBar.setVisibility(View.INVISIBLE);

@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Innovation_Full_Display"></activity>
+        <activity android:name=".Attendance_Activity" />
+        <activity android:name=".Innovation_Full_Display" />
         <activity android:name=".Student_Activities_Get" />
         <activity android:name=".Innovation_List_Show" />
         <activity android:name=".CSR_Post_School" />
@@ -95,6 +96,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".Splash_Moral">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

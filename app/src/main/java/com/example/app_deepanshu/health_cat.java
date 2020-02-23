@@ -28,7 +28,7 @@ public class health_cat extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                Intent i = new Intent(health_cat.this, doctor_login.class);
+                Intent i = new Intent(health_cat.this, Splash_Moral.class);
                 startActivity(i);
             }
         });

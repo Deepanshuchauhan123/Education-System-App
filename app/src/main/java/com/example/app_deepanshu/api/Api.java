@@ -1,6 +1,7 @@
 package com.example.app_deepanshu.api;
 
 import com.example.app_deepanshu.ActivitiesModel;
+import com.example.app_deepanshu.AttendanceModel;
 import com.example.app_deepanshu.Choice;
 import com.example.app_deepanshu.Display_teach;
 import com.example.app_deepanshu.InnovationModel;
@@ -34,7 +35,6 @@ public interface Api {
     @FormUrlEncoded
 
     // Student Register
-
     @POST("/account/student/create")
     Call<DefaultResponse> createUser(
             @Field("aadhar") String aadhar,
@@ -283,6 +283,9 @@ public interface Api {
 
     @GET("/scheme")
     Call<List<Schemes_Model>> getSchemes();
+
+    @GET("/account/student")
+    Call<List<AttendanceModel>> getstudents();
 
     @GET("/edu/SchoolActivity")
     Call<List<ActivitiesModel>> getActivities();

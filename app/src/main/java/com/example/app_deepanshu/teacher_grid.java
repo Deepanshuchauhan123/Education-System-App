@@ -19,7 +19,7 @@ public class teacher_grid extends AppCompatActivity {
     private Button report;
     private Button upload;
     private long lastClickTime = 0;
-    private Button student;
+    private Button student,attend;
    // private FirebaseAuth firebaseAuth;
 
     @Override
@@ -58,6 +58,21 @@ public class teacher_grid extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        attend = (Button) findViewById(R.id.attendance);
+        attend.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
+                    return;
+                }
+
+                lastClickTime = SystemClock.elapsedRealtime();
+                Intent i = new Intent(teacher_grid.this, Attendance_Activity.class);
+                startActivity(i);
+            }
+        });
         upload = (Button) findViewById(R.id.report_show);
         upload.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,7 +96,6 @@ public class teacher_grid extends AppCompatActivity {
                 if (SystemClock.elapsedRealtime() - lastClickTime < 1000){
                     return;
                 }
-
                 lastClickTime = SystemClock.elapsedRealtime();
                 Intent i = new Intent(teacher_grid.this, Report_By_Teacher.class);
                 startActivity(i);
@@ -97,14 +111,14 @@ public class teacher_grid extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu){
 
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
 
     @Override
-    protected void onResume() {
+    protected void onResume(){
         super.onResume();
     }
 
@@ -121,7 +135,6 @@ public class teacher_grid extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-
         SharedPreferences prefs = getSharedPreferences("X", MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
         editor.putString("lastActivity", getClass().getName());
